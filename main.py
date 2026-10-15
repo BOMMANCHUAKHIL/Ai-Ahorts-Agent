@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 load_dotenv()
+import os
 import logging
 import config_defaults
 import PIL.Image
@@ -31,22 +32,23 @@ def job():
 if __name__ == "__main__":
     log.info("Starting Shorts Agent...")
 
-    # Run once immediately on startup (optional)
-    job()
-
-    # Then schedule
-    sched = BlockingScheduler()
-    sched.add_job(
-        job,
-        "interval",
-        minutes=60,  # every hour
-        id="shorts_cycle",
-        max_instances=1,  # prevent overlap
-        coalesce=True  # if missed, run only once
-    )
-
-    log.info("Scheduler running. Ctrl+C to stop.")
-    try:
-        sched.start()
-    except KeyboardInterrupt:
-        log.info("Shutting down...")
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        # In GitHub Actions: run one cycle and exit
+        job()
+    else:
+        # Local dev: run once, then schedule hourly
+        job()
+        sched = BlockingScheduler()
+        sched.add_job(
+            job,
+            "interval",
+            minutes=60,
+            id="shorts_cycle",
+            max_instances=1,
+            coalesce=True,
+        )
+        log.info("Scheduler running. Ctrl+C to stop.")
+        try:
+            sched.start()
+        except KeyboardInterrupt:
+            log.info("Shutting down...")

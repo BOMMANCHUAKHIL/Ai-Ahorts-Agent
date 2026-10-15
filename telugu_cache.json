@@ -432,5 +432,129 @@
       "నీరు ఎక్కువగా తాగి, తగిన పరిమాణంలో ఆహారం తీసుకోండి."
     ],
     "footer": "సమతుల్యంగా జీవించండి"
+  },
+  "healthy rotis and parathas": {
+    "telugu_title": "ఆరోగ్యకర రొట్టె ఎంపికలు",
+    "telugu_subtitle": "మిల్లెట్ రొట్టెతో ఫైబర్ పెంచండి",
+    "rows": [
+      {
+        "time": "ఉదయం 6-7 AM",
+        "good_food": "millet roti",
+        "bad_food": "white flour roti",
+        "good_label": "ఆరోగ్యకర రొట్టి",
+        "bad_label": "అస్వస్థ రొట్టి"
+      },
+      {
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "millet paratha",
+        "bad_food": "butter paratha",
+        "good_label": "పోషక పరాథా",
+        "bad_label": "కొవ్వు పరాథా"
+      },
+      {
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "millet roti with veg",
+        "bad_food": "fried naan",
+        "good_label": "పోషక రొట్టి",
+        "bad_label": "తేలిక నాన్"
+      },
+      {
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "millet roti lunch",
+        "bad_food": "potato paratha",
+        "good_label": "సమతుల్య భోజనం",
+        "bad_label": "అధిక కార్బ్"
+      },
+      {
+        "time": "సాయంత్రం 4-6 PM",
+        "good_food": "millet roti snack",
+        "bad_food": "deep fried paratha",
+        "good_label": "తేలిక స్నాక్",
+        "bad_label": "అధిక చর্বి"
+      },
+      {
+        "time": "రాత్రి 7-8:30 PM",
+        "good_food": "millet roti dinner",
+        "bad_food": "white rice",
+        "good_label": "సంతులిత రాత్రి",
+        "bad_label": "సాధారణ భోజనం"
+      },
+      {
+        "time": "నిద్రకు ముందు 9-10 PM",
+        "good_food": "millet roti with curd",
+        "bad_food": "crackers",
+        "good_label": "సున్నిత రాత్రి",
+        "bad_label": "అధిక ఉప్పు"
+      }
+    ],
+    "tips": [
+      "మిల్లెట్ రొట్టె రోజుకు ఒకటి లేదా రెండు తీసుకోండి.",
+      "బియ్యం బదులుగా మిల్లెట్ రొట్టెతో ఫైబర్ పెంచండి.",
+      "పరాథా తయారు చేసేటప్పుడు ఎక్కువ నూనె వాడకండి.",
+      "రొట్టెతో పచ్చి కూరగాయలు, పప్పులు కలిపి తినండి."
+    ],
+    "footer": "ఆరోగ్యమే శక్తి"
+  },
+  "healthy sweets and desserts": {
+    "telugu_title": "స్వీట్స్‌లో ఆరోగ్యం",
+    "telugu_subtitle": "డేట్స్, జాగ్రి vs చక్కెర",
+    "rows": [
+      {
+        "time": "డేట్స్",
+        "good_food": "dates stuffed nuts",
+        "bad_food": "sugar candy",
+        "good_label": "డేట్స్ మిఠాయి",
+        "bad_label": "చక్కెర క్యాండీ"
+      },
+      {
+        "time": "జాగ్రి",
+        "good_food": "jaggery laddoo",
+        "bad_food": "refined sugar laddoo",
+        "good_label": "జాగ్రి లడ్డు",
+        "bad_label": "చక్కెర లడ్డు"
+      },
+      {
+        "time": "పండు మిఠాయి",
+        "good_food": "fruit salad with honey",
+        "bad_food": "fruit jam with sugar",
+        "good_label": "పండు సలాడ్",
+        "bad_label": "చక్కెర జామ్"
+      },
+      {
+        "time": "ఓట్స్ బిస్కెట్",
+        "good_food": "oats banana cookies",
+        "bad_food": "butter cookies",
+        "good_label": "ఓట్స్ బిస్కెట్",
+        "bad_label": "బటర్ బిస్కెట్"
+      },
+      {
+        "time": "స్వీట్ పొటాటో",
+        "good_food": "sweet potato halwa",
+        "bad_food": "regular halwa",
+        "good_label": "బంగాళదుంప హల్వా",
+        "bad_label": "సాధారణ హల్వా"
+      },
+      {
+        "time": "కోబ్బర లడ్డు",
+        "good_food": "coconut jaggery laddu",
+        "bad_food": "coconut sugar laddu",
+        "good_label": "కోబ్బర లడ్డు",
+        "bad_label": "చక్కెర లడ్డు"
+      },
+      {
+        "time": "కల్చి",
+        "good_food": "date and nut bar",
+        "bad_food": "chocolate bar",
+        "good_label": "డేట్ బార్",
+        "bad_label": "చాక్లెట్ బార్"
+      }
+    ],
+    "tips": [
+      "చక్కెర బదులు డేట్స్ లేదా జాగ్రి ఉపయోగించండి.",
+      "స్వీట్స్‌లో పండ్లు, నట్లు జోడించండి.",
+      "బేకింగ్‌లో బట్టర్ బదులు ఆవకాడో లేదా యోగర్ట్ పెట్టండి.",
+      "పోర్షన్ పరిమాణాన్ని నియంత్రించండి."
+    ],
+    "footer": "ఆరోగ్యకరంగా మధురంగా"
   }
 }

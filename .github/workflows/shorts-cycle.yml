@@ -2,29 +2,40 @@ name: Shorts Agent Cycle
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Execute every hour
-  workflow_dispatch:       # Support manual triggering
+    - cron: '0 * * * *'   # every hour
+  workflow_dispatch:       # manual trigger button
 
 jobs:
   run-agent:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          playwright install chromium
+          playwright install --with-deps chromium
 
-      - name: Run cycle
+      - name: Restore YouTube credentials
+        env:
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+        run: |
+          mkdir -p credentials output logs
+          echo "$YOUTUBE_CLIENT_SECRET" > credentials/client_secret.json
+          echo "$YOUTUBE_TOKEN" | base64 -d > credentials/token.pickle
+
+      - name: Run one cycle
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-          # OAuth related secrets
         run: python main.py

@@ -2,7 +2,7 @@ import os
 import hashlib
 import requests
 from dotenv import load_dotenv
-
+import time
 load_dotenv()
 
 
@@ -85,11 +85,31 @@ class FoodFetcher:
             or hit.get("previewURL")
         )
 
-        img_resp = requests.get(image_url, timeout=30)
-        img_resp.raise_for_status()
-
-        with open(path, "wb") as f:
-            f.write(img_resp.content)
+        # Retry on 429 with backoff — Pixabay CDN throttles hard
+        last_exc = None
+        for attempt in range(5):
+            try:
+                img_resp = requests.get(
+                    image_url,
+                    timeout=30,
+                    headers={"User-Agent": "Mozilla/5.0 (shorts-agent)"},
+                )
+                if img_resp.status_code == 429:
+                    wait = 2 ** attempt  # 1, 2, 4, 8, 16 seconds
+                    print(f"    ⏳ 429 from Pixabay CDN, waiting {wait}s...")
+                    time.sleep(wait)
+                    continue
+                img_resp.raise_for_status()
+                with open(path, "wb") as f:
+                    f.write(img_resp.content)
+                break
+            except Exception as exc:
+                last_exc = exc
+                time.sleep(2 ** attempt)
+        else:
+            raise RuntimeError(
+                f"Pixabay image download failed after 5 tries: {last_exc}"
+            )
 
         print(f"    ✓ Pixabay image: {food_description} → {hit.get('tags')}")
         return path
