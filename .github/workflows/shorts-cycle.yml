@@ -33,9 +33,23 @@ jobs:
           mkdir -p credentials output logs
           echo "$YOUTUBE_CLIENT_SECRET" > credentials/client_secret.json
           echo "$YOUTUBE_TOKEN" | base64 -d > credentials/token.pickle
+          
+      - name: Restore food image cache
+        uses: actions/cache@v4
+        with:
+          path: output/food_cache
+          key: food-cache-${{ github.run_id }}
+          restore-keys: |
+            food-cache-
 
       - name: Run one cycle
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PIXABAY_API_KEYS: ${{ secrets.PIXABAY_API_KEYS }}
+        run: python main.py
+
+      - name: Run one cycle
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEYS }}
         run: python main.py

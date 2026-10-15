@@ -4,134 +4,132 @@
 <meta charset="UTF-8">
 <style>
   @font-face {
-    font-family: 'Telugu';
+    font-family: 'TeluguBold';
     src: url('file:///{{ font_dir }}/NotoSansTelugu-Bold.ttf') format('truetype');
     font-weight: 700;
   }
   @font-face {
-    font-family: 'Telugu';
+    font-family: 'TeluguRegular';
     src: url('file:///{{ font_dir }}/NotoSansTelugu-Regular.ttf') format('truetype');
     font-weight: 400;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
+  html, body {
     width: 1080px;
     height: 1920px;
-    font-family: 'Telugu', sans-serif;
-    background: #f4f7f2;
+    font-family: 'TeluguRegular', sans-serif;
+    background: #eef5ec;
     overflow: hidden;
   }
 
+  /* Fill the full 1080×1920 canvas.
+     Only a modest safe margin at top/bottom so YouTube's
+     mini player bar and progress bar don't clip text. */
   .poster {
     width: 1080px;
     height: 1920px;
-    padding: 0;
-    background: #f4f7f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.safe {
-    width: 1080px;
-    height: 1920px;
-    padding: 220px 40px 220px 40px;
+    padding: 120px 32px 180px 32px;   /* top right bottom left */
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    transform: scale(0.85);
-    transform-origin: center center;
-    /* Remove the background here so only .poster paints it */
+    gap: 16px;
     background:
-      radial-gradient(circle at 10% 0%, #e8f5e9 0%, transparent 40%),
-      radial-gradient(circle at 90% 100%, #fff8e1 0%, transparent 40%),
-      #f4f7f2;
-    border-radius: 30px;
-}
+      radial-gradient(circle at 10% 5%, #dff0dd 0%, transparent 40%),
+      radial-gradient(circle at 90% 95%, #fdf5d8 0%, transparent 40%),
+      #eef5ec;
+  }
 
   /* ── Header ── */
   .header {
-    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
-    border-radius: 28px;
-    padding: 30px 36px;
+    background: linear-gradient(135deg, #0f5c1e 0%, #2e7d32 100%);
+    border-radius: 30px;
+    padding: 30px 40px 26px;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(27, 94, 32, 0.25);
+    box-shadow: 0 10px 30px rgba(15, 92, 30, 0.30);
     position: relative;
-    overflow: hidden;
+    flex-shrink: 0;
   }
-  .header::before {
+  .header::before,
+  .header::after {
     content: "🌿";
     position: absolute;
-    top: 14px;
-    right: 26px;
-    font-size: 40px;
-    opacity: 0.35;
+    top: 16px;
+    font-size: 46px;
+    opacity: 0.45;
   }
+  .header::before { left: 26px; }
+  .header::after  { right: 26px; transform: scaleX(-1); }
+
   .header h1 {
-    font-size: 62px;
-    color: #ffd54f;
-    font-weight: 700;
+    font-family: 'TeluguBold', sans-serif;
+    font-size: 76px;
+    color: #ffe27a;
+    line-height: 1.18;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.35);
     letter-spacing: 0.5px;
-    line-height: 1.15;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.25);
   }
   .header h2 {
-    font-size: 30px;
-    color: #e8f5e9;
-    font-weight: 400;
-    margin-top: 10px;
+    font-family: 'TeluguRegular', sans-serif;
+    font-size: 34px;
+    color: #e9f5e4;
+    margin-top: 8px;
+    letter-spacing: 0.3px;
   }
 
-  /* ── Comparison headers ── */
+  /* ── Compare headers ── */
   .compare-headers {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 18px;
+    flex-shrink: 0;
   }
   .compare-headers .badge {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 14px;
-    padding: 20px;
+    padding: 18px;
     border-radius: 22px;
-    font-size: 34px;
-    font-weight: 700;
+    font-family: 'TeluguBold', sans-serif;
+    font-size: 40px;
     color: #fff;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.16);
   }
-  .badge.good { background: linear-gradient(135deg, #2e7d32, #43a047); }
-  .badge.bad  { background: linear-gradient(135deg, #c62828, #e53935); }
+  .badge.good { background: linear-gradient(135deg, #1b5e20, #43a047); }
+  .badge.bad  { background: linear-gradient(135deg, #b71c1c, #e53935); }
   .badge .icon {
-    width: 44px;
-    height: 44px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
+    font-size: 32px;
+    font-weight: 900;
   }
-  .badge.good .icon { color: #2e7d32; }
-  .badge.bad  .icon { color: #c62828; }
+  .badge.good .icon { color: #1b5e20; }
+  .badge.bad  .icon { color: #b71c1c; }
 
-  /* ── Rows ── */
+  /* ── Rows: expand to fill remaining space ── */
   .rows {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    flex: 1;
+    flex: 1 1 auto;
+    min-height: 0;
   }
   .row {
     display: grid;
-    grid-template-columns: 170px 1fr 1fr;
+    grid-template-columns: 190px 1fr 1fr;
     gap: 14px;
-    align-items: stretch;
-    background: #fff;
+    background: #ffffff;
     border-radius: 20px;
     padding: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+    flex: 1 1 0;        /* each row grows equally */
+    min-height: 0;
   }
 
   .time-pill {
@@ -139,111 +137,118 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #fff3cd, #ffe082);
-    color: #5d4037;
-    font-size: 24px;
-    font-weight: 700;
+    background: linear-gradient(135deg, #fff2c9, #ffd966);
+    color: #4e342e;
+    font-family: 'TeluguBold', sans-serif;
+    font-size: 28px;
     border-radius: 16px;
-    padding: 12px 8px;
+    padding: 8px;
     line-height: 1.2;
-    border: 2px solid #ffca28;
+    border: 2px solid #f5c518;
   }
 
   .food-card {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     padding: 10px 16px 10px 10px;
     border-radius: 16px;
+    overflow: hidden;
+    min-width: 0;
   }
   .food-card.good {
-    background: #e8f5e9;
-    border: 2px solid #a5d6a7;
+    background: #e9f7ea;
+    border: 2px solid #a6d8a8;
   }
   .food-card.bad {
-    background: #ffebee;
-    border: 2px solid #ef9a9a;
+    background: #fdeaea;
+    border: 2px solid #f2a6a6;
   }
 
+  /* Image auto-sizes with row height */
   .food-card img {
-    width: 130px;
-    height: 130px;
-    border-radius: 14px;
+    width: 145px;
+    height: 100%;
+    max-height: 145px;
+    min-height: 100px;
+    border-radius: 12px;
     object-fit: cover;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.14);
     flex-shrink: 0;
     background: #fff;
   }
 
   .food-card .label {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.25;
+    font-family: 'TeluguBold', sans-serif;
+    font-size: 32px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
   }
-  .food-card.good .label { color: #1b5e20; }
-  .food-card.bad  .label { color: #b71c1c; }
+  .food-card.good .label { color: #14551a; }
+  .food-card.bad  .label { color: #9c1f1f; }
 
   /* ── Tips panel ── */
   .tips {
-    background: linear-gradient(135deg, #f1f8e9, #fffde7);
-    border: 3px solid #c5e1a5;
+    background: linear-gradient(135deg, #f3faeb, #fffbdc);
+    border: 3px solid #b7df8f;
     border-radius: 24px;
-    padding: 22px 30px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    padding: 20px 28px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+    flex-shrink: 0;
   }
   .tips h3 {
-    font-size: 34px;
-    color: #33691e;
+    font-family: 'TeluguBold', sans-serif;
+    font-size: 42px;
+    color: #295e14;
     text-align: center;
-    margin-bottom: 14px;
-    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.4px;
   }
   .tips-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px 30px;
+    gap: 8px 28px;
   }
   .tip {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: 24px;
-    color: #33691e;
-    font-weight: 400;
+    font-family: 'TeluguRegular', sans-serif;
+    font-size: 27px;
+    color: #295e14;
     line-height: 1.3;
   }
   .tip .check {
-    color: #2e7d32;
-    font-weight: 700;
-    font-size: 26px;
+    color: #1b5e20;
+    font-weight: 900;
+    font-size: 30px;
     flex-shrink: 0;
+    line-height: 1.1;
   }
 
   /* ── Footer ── */
   .footer {
-    background: linear-gradient(135deg, #1b5e20, #2e7d32);
-    color: #ffd54f;
+    background: linear-gradient(135deg, #0f5c1e, #2e7d32);
+    color: #ffe27a;
     border-radius: 22px;
-    padding: 20px;
+    padding: 22px;
     text-align: center;
-    font-size: 40px;
-    font-weight: 700;
+    font-family: 'TeluguBold', sans-serif;
+    font-size: 48px;
     letter-spacing: 0.5px;
-    box-shadow: 0 6px 18px rgba(27, 94, 32, 0.28);
+    box-shadow: 0 8px 20px rgba(15, 92, 30, 0.30);
+    flex-shrink: 0;
   }
 </style>
 </head>
 <body>
   <div class="poster">
-      <div class="safe">
 
-    <!-- Header -->
     <div class="header">
       <h1>{{ telugu_title }}</h1>
       <h2>{{ telugu_subtitle }}</h2>
     </div>
 
-    <!-- Good vs Bad headers -->
     <div class="compare-headers">
       <div class="badge good">
         <span class="icon">✓</span>
@@ -255,7 +260,6 @@
       </div>
     </div>
 
-    <!-- Rows -->
     <div class="rows">
       {% for row in rows %}
       <div class="row">
@@ -274,7 +278,6 @@
       {% endfor %}
     </div>
 
-    <!-- Tips -->
     <div class="tips">
       <h3>గుర్తుంచుకోండి</h3>
       <div class="tips-grid">
@@ -287,9 +290,8 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <div class="footer">{{ footer }}</div>
-    </div>
+
   </div>
 </body>
 </html>

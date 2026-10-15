@@ -556,5 +556,253 @@
       "పోర్షన్ పరిమాణాన్ని నియంత్రించండి."
     ],
     "footer": "ఆరోగ్యకరంగా మధురంగా"
+  },
+  "smoothies with indian fruits": {
+    "telugu_title": "ఫల స్మూతీ ఆరోగ్యం",
+    "telugu_subtitle": "బనానా, మామిడి తో క్రీమీ స్మూతీ",
+    "rows": [
+      {
+        "time": "ఉదయం 6-7 AM",
+        "good_food": "banana mango smoothie",
+        "bad_food": "sugar soda",
+        "good_label": "పోషక స్మూతీ",
+        "bad_label": "చక్కెర పానీయం"
+      },
+      {
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "pineapple banana smoothie",
+        "bad_food": "flavored yogurt drink",
+        "good_label": "పండ్ల స్మూతీ",
+        "bad_label": "తీపి పానీయం"
+      },
+      {
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "mango papaya smoothie",
+        "bad_food": "sweetened milkshake",
+        "good_label": "విటమిన్ స్మూతీ",
+        "bad_label": "అధిక చక్కెర"
+      },
+      {
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "banana spinach smoothie",
+        "bad_food": "energy drink",
+        "good_label": "ప్రోటీన్ స్మూతీ",
+        "bad_label": "కాఫీ పానీయం"
+      },
+      {
+        "time": "సాయంత్రం 4-6 PM",
+        "good_food": "orange banana smoothie",
+        "bad_food": "sugar lemonade",
+        "good_label": "విటమిన్ C స్మూతీ",
+        "bad_label": "చక్కెర లెమొనేడ్"
+      },
+      {
+        "time": "రాత్రి 7-8:30 PM",
+        "good_food": "mango coconut smoothie",
+        "bad_food": "cream soda",
+        "good_label": "క్రీమి స్మూతీ",
+        "bad_label": "క్రీమ్ సోడా"
+      },
+      {
+        "time": "నిద్రకు ముందు 9-10 PM",
+        "good_food": "banana almond smoothie",
+        "bad_food": "chocolate milkshake",
+        "good_label": "నిద్ర స్మూతీ",
+        "bad_label": "చాక్లెట్ షేక్"
+      }
+    ],
+    "tips": [
+      "స్మూతీకి పండ్లు మాత్రమే వాడండి.",
+      "చక్కెర లేకుండా సహజ తీపి కోసం పండ్లు ఎంపిక చేయండి.",
+      "ప్రోటీన్ కోసం నట్ లేదా యోగర్ట్ జోడించండి.",
+      "పానీయం తక్కువ ఉష్ణోగ్రతలో సేవించండి."
+    ],
+    "footer": "స్వాస్థ్యంగా స్మూతీ"
+  },
+  "iron-rich foods": {
+    "telugu_title": "ఐరన్ సమృద్ధి ఆహారాలు",
+    "telugu_subtitle": "శక్తి కోసం ఐరన్",
+    "rows": [
+      {
+        "time": "ఉదయం 6-7 AM",
+        "good_food": "spinach smoothie",
+        "bad_food": "white toast",
+        "good_label": "ఐరన్ సమృద్ధి",
+        "bad_label": "ఐరన్ లేమి"
+      },
+      {
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "date and nut bar",
+        "bad_food": "sugar cereal",
+        "good_label": "ఐరన్ సమృద్ధి",
+        "bad_label": "ఐరన్ లేమి"
+      },
+      {
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "lentil soup",
+        "bad_food": "cream soup",
+        "good_label": "ఐరన్ సమృద్ధి",
+        "bad_label": "ఐరన్ లేమి"
+      },
+      {
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "chickpea salad",
+        "bad_food": "potato chips",
+        "good_label": "ఐరన్ సమృద్ధి",
+        "bad_label": "ఐరన్ లేమి"
+      },
+      {
+        "time": "సాయంత్రం 4-6 PM",
+        "good_food": "pumpkin seed snack",
+        "bad_food": "fried snacks",
+        "good_label": "ఐరన్ సమృద్ధి",
+        "bad_label": "ఐరన్ లేమి"
+      },
+      {
+        "time": "రాత్రి 7-8:30 PM",
+        "good_food": "beef stir fry",
+        "bad_food": "butter naan",
+        "good_label": "ఐరన్ సమృద్ధి",
+        "bad_label": "ఐరన్ లేమి"
+      },
+      {
+        "time": "నిద్రకు ముందు 9-10 PM",
+        "good_food": "orange slices",
+        "bad_food": "chocolate",
+        "good_label": "ఐరన్ సమృద్ధి",
+        "bad_label": "ఐరన్ లేమి"
+      }
+    ],
+    "tips": [
+      "ఐరన్ శోషణకు విటమిన్ C తీసుకోండి.",
+      "చాయ్ లేదా కాఫీని భోజనంతో పాటు తాగవద్దు.",
+      "పచ్చి ఆకుకూరలు, పప్పులు రోజుకు చేర్చండి.",
+      "వంటలో కాస్ట్ ఐరన్ పాన్ ఉపయోగించండి."
+    ],
+    "footer": "బలంగా ఉండండి"
+  },
+  "salads with indian ingredients": {
+    "telugu_title": "కచుంబర్: ఆరోగ్యకర సలాడ్",
+    "telugu_subtitle": "ఇండియన్ పదార్థాలతో తేలికైన సలాడ్",
+    "rows": [
+      {
+        "time": "ఉదయం 6-7 AM",
+        "good_food": "cucumber tomato salad",
+        "bad_food": "fried samosa",
+        "good_label": "తాజా కచుంబర్",
+        "bad_label": "వేపుడు స్నాక్"
+      },
+      {
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "onion carrot salad",
+        "bad_food": "butter toast",
+        "good_label": "కూరగాయల సలాడ్",
+        "bad_label": "బట్టర్ బ్రెడ్"
+      },
+      {
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "mint coriander salad",
+        "bad_food": "potato chips",
+        "good_label": "పుదీనా సలాడ్",
+        "bad_label": "చిప్స్ స్నాక్"
+      },
+      {
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "mixed veggie kachumber",
+        "bad_food": "creamy pasta",
+        "good_label": "మిక్స్ కచుంబర్",
+        "bad_label": "క్రీమ్ పాస్టా"
+      },
+      {
+        "time": "సాయంత్రం 4-6 PM",
+        "good_food": "radish cucumber salad",
+        "bad_food": "fried pakora",
+        "good_label": "ముల్లంగి సలాడ్",
+        "bad_label": "వేపుడు పకోడీ"
+      },
+      {
+        "time": "రాత్రి 7-8:30 PM",
+        "good_food": "spinach tomato salad",
+        "bad_food": "cheese pizza",
+        "good_label": "పాలకూర టమాటో",
+        "bad_label": "చీజ్ పిజ్జా"
+      },
+      {
+        "time": "నిద్రకు ముందు 9-10 PM",
+        "good_food": "light lemon salad",
+        "bad_food": "ice cream",
+        "good_label": "నిమ్మకాయ సలాడ్",
+        "bad_label": "ఐస్ క్రీమ్"
+      }
+    ],
+    "tips": [
+      "కచుంబర్‌లో నీరు ఎక్కువ, హైడ్రేషన్‌కు మంచిది.",
+      "తాజా కూరగాయలు రోజుకు ఒకసారి తీసుకోండి.",
+      "సలాడ్‌లో నిమ్మరసం లేదా చింతపండు రసం వేసి రుచి పెంచండి.",
+      "సలాడ్‌ను బాగా కలిపి, నూనె పరిమితంగా ఉపయోగించండి."
+    ],
+    "footer": "తాజా తినండి, ఆరోగ్యంగా"
+  },
+  "fiber-rich fruits and vegetables": {
+    "telugu_title": "ఫైబర్‑సమృద్ధి పండ్లు & కూరగాయలు",
+    "telugu_subtitle": "జీర్ణానికి సహాయపడే ఫైబర్",
+    "rows": [
+      {
+        "time": "ఫైబర్",
+        "good_food": "Apple",
+        "bad_food": "Potato chips",
+        "good_label": "ఆపిల్",
+        "bad_label": "చిప్స్"
+      },
+      {
+        "time": "ఫైబర్",
+        "good_food": "Carrot sticks",
+        "bad_food": "White bread",
+        "good_label": "క్యారెట్",
+        "bad_label": "వైట్ బ్రెడ్"
+      },
+      {
+        "time": "ఫైబర్",
+        "good_food": "Broccoli florets",
+        "bad_food": "Fried dough",
+        "good_label": "బ్రోకొలి",
+        "bad_label": "ఫ్రైడ్ డో"
+      },
+      {
+        "time": "ఫైబర్",
+        "good_food": "Mixed berries",
+        "bad_food": "Candy",
+        "good_label": "బెర్రీలు",
+        "bad_label": "క్యాండీ"
+      },
+      {
+        "time": "ఫైబర్",
+        "good_food": "Pear slices",
+        "bad_food": "Ice cream",
+        "good_label": "పియర్",
+        "bad_label": "ఐస్ క్రీమ్"
+      },
+      {
+        "time": "ఫైబర్",
+        "good_food": "Spinach salad",
+        "bad_food": "Fried chicken",
+        "good_label": "స్పినాచ్",
+        "bad_label": "ఫ్రైడ్ చికెన్"
+      },
+      {
+        "time": "ఫైబర్",
+        "good_food": "Sweet potato",
+        "bad_food": "White rice",
+        "good_label": "స్వీట్ పొటాటో",
+        "bad_label": "వైట్ రైస్"
+      }
+    ],
+    "tips": [
+      "ప్రతి భోజనంలో పండ్లు, కూరగాయలు చేర్చండి",
+      "క్యారెట్, బీట్‌రూట్ వంటి కాచికాయలు తింటే ఫైబర్ పెరుగుతుంది",
+      "పండ్లను తరిగి స్నాక్‌గా తీసుకోవడం సులభం",
+      "వెజిటబుల్ జ్యూస్ బదులుగా పూర్తి పండ్లు తినండి"
+    ],
+    "footer": "ఆరోగ్యకరమైన ఫైబర్"
   }
 }

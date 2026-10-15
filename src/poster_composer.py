@@ -14,9 +14,10 @@ class PosterComposer:
         content = self.generator.get_content(english_concept, info_hint)
 
         rows = []
+        total = len(content["rows"])
         for i, r in enumerate(content["rows"]):
             good_img = self.fetcher.fetch(r["good_food"])
-            bad_img = self.fetcher.fetch(r["bad_food"])
+            bad_img  = self.fetcher.fetch(r["bad_food"])
             rows.append({
                 "time": r["time"],
                 "good_image": good_img,
@@ -24,9 +25,8 @@ class PosterComposer:
                 "good_label": r["good_label"],
                 "bad_label": r["bad_label"],
             })
-            # Be polite to Pixabay: 1s between rows (2 images each)
-            if i < len(content["rows"]) - 1:
-                time.sleep(1.0)
+            if i < total - 1:
+                time.sleep(0.8)      # be gentle to APIs
 
         context = {
             "telugu_title": content["telugu_title"],
