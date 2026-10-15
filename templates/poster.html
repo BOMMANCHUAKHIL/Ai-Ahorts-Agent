@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face {
+    font-family: 'NotoTelugu';
+    src: url('file:///{{font_dir}}/NotoSansTelugu-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: 'NotoTelugu';
+    src: url('file:///{{font_dir}}/NotoSansTelugu-Regular.ttf') format('truetype');
+    font-weight: normal;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    font-family: 'NotoTelugu', sans-serif;
+  }
+
+  .poster {
+    width: 1080px;
+    height: 1920px;
+    background: linear-gradient(180deg, #f4f9f0 0%, #eaf3e0 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+  }
+
+  /* ─── Header ─── */
+  .header {
+    background: #0d5c2c;
+    border-radius: 28px;
+    padding: 28px 24px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .header h1 {
+    font-size: 64px;
+    line-height: 1.15;
+    color: #ffe14a;
+    text-shadow: 2px 2px 0 #083d1c;
+    margin-bottom: 8px;
+  }
+  .header p {
+    font-size: 32px;
+    color: #fff;
+  }
+
+  /* ─── Comparison band ─── */
+  .band {
+    display: flex;
+    gap: 16px;
+  }
+  .band-item {
+    flex: 1;
+    padding: 18px;
+    border-radius: 22px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  }
+  .band-good { background: #1e8a3c; }
+  .band-bad  { background: #c22b2b; }
+  .band-icon {
+    font-size: 40px;
+    background: #fff;
+    color: #1e8a3c;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+  .band-bad .band-icon { color: #c22b2b; }
+
+  /* ─── Rows grid ─── */
+  .rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+  .row {
+    display: flex;
+    gap: 10px;
+    height: calc((100% - 60px) / 7);
+  }
+  .row-time {
+    width: 200px;
+    background: #fbe89c;
+    border-radius: 16px;
+    padding: 12px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5a3d00;
+    line-height: 1.2;
+  }
+  .cell {
+    flex: 1;
+    border-radius: 16px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+  }
+  .cell-good {
+    background: #d6f0d6;
+    border: 2px solid #1e8a3c;
+  }
+  .cell-bad {
+    background: #fbdcdc;
+    border: 2px solid #c22b2b;
+  }
+  .cell img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    background: #eee;
+  }
+  .cell-label {
+    font-size: 20px;
+    line-height: 1.15;
+    color: #1a1a1a;
+    font-weight: bold;
+  }
+
+  /* ─── Tips panel ─── */
+  .tips {
+    background: #fff8c9;
+    border: 3px solid #d4b800;
+    border-radius: 22px;
+    padding: 16px 20px;
+  }
+  .tips-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #8a6c00;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .tips ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+  }
+  .tips li {
+    font-size: 20px;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.2;
+  }
+  .tips li::before {
+    content: "✓";
+    color: #1e8a3c;
+    font-weight: 900;
+    font-size: 22px;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    background: #0d5c2c;
+    border-radius: 22px;
+    padding: 18px;
+    text-align: center;
+    color: #ffe14a;
+    font-size: 32px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+</style>
+</head>
+<body>
+  <div class="poster">
+
+    <div class="header">
+      <h1>{{ telugu_title }}</h1>
+      <p>{{ telugu_subtitle }}</p>
+    </div>
+
+    <div class="band">
+      <div class="band-item band-good">
+        <span class="band-icon">✓</span>
+        <span>మంచి ఎంపికలు</span>
+      </div>
+      <div class="band-item band-bad">
+        <span class="band-icon">✕</span>
+        <span>పరిమితం చేయండి</span>
+      </div>
+    </div>
+
+    <div class="rows">
+      {% for row in rows %}
+      <div class="row">
+        <div class="row-time">{{ row.time }}</div>
+        <div class="cell cell-good">
+          <img src="{{ row.good_image }}" alt="">
+          <div class="cell-label">{{ row.good_label }}</div>
+        </div>
+        <div class="cell cell-bad">
+          <img src="{{ row.bad_image }}" alt="">
+          <div class="cell-label">{{ row.bad_label }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="tips">
+      <div class="tips-title">గుర్తుంచుకోండి</div>
+      <ul>
+        {% for tip in tips %}
+        <li>{{ tip }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer">{{ footer }}</div>
+
+  </div>
+</body>
+</html>

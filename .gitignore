@@ -1,0 +1,14 @@
+# Secrets
+.env
+credentials/
+*.pickle
+
+# Generated content
+output/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

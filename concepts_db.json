@@ -1,0 +1,196 @@
+{
+  "concepts": [
+    {
+      "id": "healthy_indian_breakfast",
+      "english_label": "healthy Indian breakfast",
+      "telugu_title": "ఆరోగ్యకరమైన ఉదయపు అల్పాహారం",
+      "telugu_subtitle": "రోజు మొత్తం శక్తినిచ్చే తెలివైన ఎంపికలు",
+      "rows": [
+        {
+          "time": "ఉదయం 6-7 AM",
+          "good_food": "idli with sambar",
+          "bad_food": "white bread toast with jam",
+          "good_label": "ఇడ్లీ + సాంబార్",
+          "bad_label": "వైట్ బ్రెడ్ జామ్"
+        },
+        {
+          "time": "ఉదయం 7-9 AM",
+          "good_food": "pesarattu with chutney",
+          "bad_food": "sugary cereal",
+          "good_label": "పెసరట్టు + పచ్చడి",
+          "bad_label": "షుగర్ సీరియల్"
+        },
+        {
+          "time": "ఉదయం 8-9 AM",
+          "good_food": "upma with vegetables",
+          "bad_food": "samosa",
+          "good_label": "కూరగాయల ఉప్మా",
+          "bad_label": "సమోసా"
+        },
+        {
+          "time": "ఉదయం 9-10 AM",
+          "good_food": "boiled eggs",
+          "bad_food": "fried puri",
+          "good_label": "ఉడికించిన గుడ్లు",
+          "bad_label": "వేయించిన పూరీ"
+        },
+        {
+          "time": "మధ్యాహ్నం 10-11 AM",
+          "good_food": "banana and apple",
+          "bad_food": "biscuits",
+          "good_label": "అరటి + యాపిల్",
+          "bad_label": "బిస్కెట్లు"
+        },
+        {
+          "time": "మధ్యాహ్నం 11-12 PM",
+          "good_food": "buttermilk",
+          "bad_food": "soft drink",
+          "good_label": "మజ్జిగ",
+          "bad_label": "సోడా"
+        },
+        {
+          "time": "మధ్యాహ్నం 12-2 PM",
+          "good_food": "rice with dal and vegetables",
+          "bad_food": "fast food burger",
+          "good_label": "అన్నం + పప్పు + కూర",
+          "bad_label": "ఫాస్ట్ ఫుడ్"
+        }
+      ],
+      "tips": [
+        "ఉదయం 7-9 మధ్య అల్పాహారం తినండి",
+        "ప్రతి భోజనంలో ప్రోటీన్ చేర్చండి",
+        "నీరు ఎక్కువగా త్రాగండి",
+        "పండ్లు మరియు కూరగాయలు తినండి"
+      ],
+      "footer": "ఆరోగ్యమే మహాభాగ్యం"
+    },
+    {
+      "id": "protein_rich_vegetarian",
+      "english_label": "protein-rich vegetarian foods",
+      "telugu_title": "ప్రోటీన్ నిండిన శాకాహారం",
+      "telugu_subtitle": "కండరాలకు, శక్తికి అవసరమైన ప్రోటీన్",
+      "rows": [
+        {
+          "time": "ఉదయం 7-9 AM",
+          "good_food": "moong dal chilla",
+          "bad_food": "white bread",
+          "good_label": "పెసరట్టు",
+          "bad_label": "వైట్ బ్రెడ్"
+        },
+        {
+          "time": "ఉదయం 9-11 AM",
+          "good_food": "sprouts bowl",
+          "bad_food": "potato chips",
+          "good_label": "మొలకెత్తిన గింజలు",
+          "bad_label": "చిప్స్"
+        },
+        {
+          "time": "మధ్యాహ్నం 12-2 PM",
+          "good_food": "paneer curry with roti",
+          "bad_food": "fried rice",
+          "good_label": "పనీర్ కర్రీ + రొట్టె",
+          "bad_label": "ఫ్రైడ్ రైస్"
+        },
+        {
+          "time": "మధ్యాహ్నం 2-4 PM",
+          "good_food": "curd rice with dal",
+          "bad_food": "instant noodles",
+          "good_label": "పెరుగు అన్నం + పప్పు",
+          "bad_label": "నూడుల్స్"
+        },
+        {
+          "time": "సాయంత్రం 4-6 PM",
+          "good_food": "roasted chana",
+          "bad_food": "samosa",
+          "good_label": "వేయించిన శనగలు",
+          "bad_label": "సమోసా"
+        },
+        {
+          "time": "రాత్రి 7-8 PM",
+          "good_food": "rajma with brown rice",
+          "bad_food": "pizza",
+          "good_label": "రాజ్మా + బ్రౌన్ రైస్",
+          "bad_label": "పిజ్జా"
+        },
+        {
+          "time": "రాత్రి 8-9 PM",
+          "good_food": "grilled paneer tikka",
+          "bad_food": "fried chicken",
+          "good_label": "గ్రిల్డ్ పనీర్ టిక్కా",
+          "bad_label": "ఫ్రైడ్ చికెన్"
+        }
+      ],
+      "tips": [
+        "ప్రతి భోజనంలో పప్పు లేదా పనీర్ చేర్చండి",
+        "మొలకెత్తిన గింజలు తినండి",
+        "వేయించిన కాదు, ఉడికించినవి తినండి",
+        "నట్స్ మరియు విత్తనాలు తినండి"
+      ],
+      "footer": "ప్రోటీన్ - ఆరోగ్యానికి ఆధారం"
+    },
+    {
+      "id": "iron_rich_foods",
+      "english_label": "iron-rich foods",
+      "telugu_title": "ఇనుము నిండిన ఆహారం",
+      "telugu_subtitle": "రక్త హీనత నివారణకు సహజ మార్గం",
+      "rows": [
+        {
+          "time": "ఉదయం 7-9 AM",
+          "good_food": "spinach dosa",
+          "bad_food": "plain toast",
+          "good_label": "పాలకూర దోస",
+          "bad_label": "టోస్ట్"
+        },
+        {
+          "time": "ఉదయం 9-11 AM",
+          "good_food": "dates and figs",
+          "bad_food": "sugary biscuits",
+          "good_label": "ఖర్జూరం + అంజీర్",
+          "bad_label": "బిస్కెట్లు"
+        },
+        {
+          "time": "మధ్యాహ్నం 12-2 PM",
+          "good_food": "spinach dal with rice",
+          "bad_food": "white pasta",
+          "good_label": "పాలకూర పప్పు",
+          "bad_label": "వైట్ పాస్తా"
+        },
+        {
+          "time": "మధ్యాహ్నం 2-4 PM",
+          "good_food": "jaggery with peanuts",
+          "bad_food": "chocolate bar",
+          "good_label": "బెల్లం + శనగలు",
+          "bad_label": "చాక్లెట్"
+        },
+        {
+          "time": "సాయంత్రం 4-6 PM",
+          "good_food": "beetroot juice",
+          "bad_food": "tea with sugar",
+          "good_label": "బీట్‌రూట్ జ్యూస్",
+          "bad_label": "షుగర్ టీ"
+        },
+        {
+          "time": "రాత్రి 7-9 PM",
+          "good_food": "moringa leaves curry",
+          "bad_food": "processed meat",
+          "good_label": "మునగాకు కూర",
+          "bad_label": "ప్రాసెస్డ్ మీట్"
+        },
+        {
+          "time": "నిద్రకు ముందు",
+          "good_food": "warm milk with dates",
+          "bad_food": "coffee",
+          "good_label": "పాలు + ఖర్జూరం",
+          "bad_label": "కాఫీ"
+        }
+      ],
+      "tips": [
+        "పాలకూర, మునగాకు తినండి",
+        "ఖర్జూరం, బెల్లం తినండి",
+        "విటమిన్ C తో ఇనుము శోషణ పెరుగుతుంది",
+        "భోజనంతో టీ త్రాగవద్దు"
+      ],
+      "footer": "ఇనుము - రక్తానికి బలం"
+    }
+  ]
+}

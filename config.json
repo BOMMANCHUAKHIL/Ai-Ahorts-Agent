@@ -1,0 +1,40 @@
+{
+  "image_prompt": "Healthy breakfast foods on a wooden table",
+  "topic": "Nutrition and healthy eating",
+  "image_style": "Realistic food photography",
+  "video_duration": 15,
+  "upload_interval_minutes": 60,
+  "privacy_status": "private",
+  "video_title_template": "{topic} Tip #{counter}",
+  "video_description": "Follow for daily tips!\n\n#shorts #nutrition",
+  "image_providers": [
+    {
+      "name": "pollinations",
+      "priority": 1,
+      "endpoint": "https://image.pollinations.ai/prompt/{prompt}?width=1080&height=1920&nologo=true"
+    },
+    {
+      "name": "veida",
+      "priority": 2
+    }
+  ],
+  "music_rotation": [
+    "assets/music/#OthersVsMe #CookingVsMe #CookingComedy #FunnyCooking #CookingFails #ExpectationVsReality.mp3",
+    "assets/music/11 October 2026.mp3",
+    "assets/music/Bro become the chocolate collector 🍫 #vijay.mp3",
+    "assets/music/Chennai silk saree wholesaler #tamilshorts #bandhejsaree #chennaisilks.mp3",
+    "assets/music/Drogon  Let Me Take Rest ! 😴.mp3",
+    "assets/music/Make it easy drawing 🎨✏️ ఎవరు బాగా వేస్తారు చెప్పండి.mp3",
+    "assets/music/Mujhe hi dara diya 😂 @Shikhasart3 #shorts.mp3",
+    "assets/music/Onam Sadhya part -1 #miniature #miniaturecooking #onam #kerala #festival #food #art.mp3",
+    "assets/music/Sammakka song from 🕊️The Paradise🕊️ is an emotional track that highlights monther and son#viral.mp3",
+    "assets/music/Shiv mandir from cardboard.mp3",
+    "assets/music/Wait For Bro's Reply 🤣 #shadi #wedding #boy #aura #boysattitudestatus #girls #savage #meme #viral.mp3",
+    "assets/music/Wait for end ❤️🥹😂 #foryou #love 🥰 #like #comedy #funny #viral #likeforlikes #tending #lovestatus.mp3"
+  ],
+  "schedule": {
+    "start_hour": 8,
+    "end_hour": 22,
+    "max_videos_per_day": 12
+  }
+}
