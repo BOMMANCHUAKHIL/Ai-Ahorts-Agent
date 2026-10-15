@@ -1,4 +1,4 @@
-import os
+import time
 from src.telugu_generator import TeluguGenerator
 from src.food_fetcher import FoodFetcher
 from src.html_renderer import HTMLRenderer
@@ -11,12 +11,10 @@ class PosterComposer:
         self.renderer = HTMLRenderer()
 
     def compose(self, english_concept: str, info_hint: str = "") -> str:
-        # 1. Telugu content from Groq
         content = self.generator.get_content(english_concept, info_hint)
 
-        # 2. Fetch images from Pixabay for each row
         rows = []
-        for r in content["rows"]:
+        for i, r in enumerate(content["rows"]):
             good_img = self.fetcher.fetch(r["good_food"])
             bad_img = self.fetcher.fetch(r["bad_food"])
             rows.append({
@@ -26,8 +24,10 @@ class PosterComposer:
                 "good_label": r["good_label"],
                 "bad_label": r["bad_label"],
             })
+            # Be polite to Pixabay: 1s between rows (2 images each)
+            if i < len(content["rows"]) - 1:
+                time.sleep(1.0)
 
-        # 3. Render the poster HTML → PNG
         context = {
             "telugu_title": content["telugu_title"],
             "telugu_subtitle": content["telugu_subtitle"],

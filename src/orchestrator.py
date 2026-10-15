@@ -20,27 +20,42 @@ class ShortsOrchestrator:
         self.video_comp = VideoComposer(self.config)
         self.uploader = YouTubeUploader()
 
-        self.music_index = 0
         self.video_counter = 0
+        self.music_index = 0
         self.state_path = "output/state.json"
         self._load_state()
 
     def _load_state(self):
         if os.path.exists(self.state_path):
             with open(self.state_path, "r", encoding="utf-8") as f:
-                self.video_counter = json.load(f).get("counter", 0)
+                data = json.load(f)
+                self.video_counter = data.get("counter", 0)
+                self.music_index = data.get("music_index", 0)
 
     def _save_state(self):
+        os.makedirs("output", exist_ok=True)
         with open(self.state_path, "w", encoding="utf-8") as f:
-            json.dump({"counter": self.video_counter}, f)
+            json.dump(
+                {
+                    "counter": self.video_counter,
+                    "music_index": self.music_index,
+                },
+                f,
+                indent=2,
+            )
 
     def _next_music(self):
         tracks = self.config.get("music_rotation", [])
         if not tracks:
             return None
-        track = tracks[self.music_index % len(tracks)]
-        self.music_index += 1
-        return track if os.path.exists(track) else None
+
+        # Try each track once; skip missing files
+        for _ in range(len(tracks)):
+            track = tracks[self.music_index % len(tracks)]
+            self.music_index += 1
+            if os.path.exists(track):
+                return track
+        return None
 
     def run_cycle(self):
         self.video_counter += 1
@@ -54,24 +69,25 @@ class ShortsOrchestrator:
         english_concept = entry["concept"]
         info_hint = entry.get("info", "")
 
-        # 2. Build the poster (LLM writes Telugu content on the fly)
+        # 2. Build the poster
         print("\n[2/4] Building Telugu poster...")
         poster_png = self.poster_composer.compose(
             english_concept=english_concept,
             info_hint=info_hint,
         )
 
-        # 3. Compose video
+        # 3. Compose video with the next audio
         print("\n[3/4] Composing video...")
+        music = self._next_music()
+        print(f"    → Using music: {music}")
         video_path = self.video_comp.compose(
             poster_png=poster_png,
-            music_path=self._next_music(),
+            music_path=music,
         )
         print(f"    ✓ Video: {video_path}")
 
         # 4. Upload
         print("\n[4/4] Uploading to YouTube...")
-        # Title from the LLM cache
         cached = self.poster_composer.generator.cache.get(
             english_concept.lower().strip(), {}
         )
@@ -86,6 +102,8 @@ class ShortsOrchestrator:
             )
         except Exception as e:
             print(f"    ✗ Upload failed: {e}")
+            # Save state so the next run advances to a different song
+            self._save_state()
             return False
 
         self._save_state()

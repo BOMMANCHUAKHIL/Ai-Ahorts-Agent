@@ -44,9 +44,20 @@ class HTMLRenderer:
         )
 
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
+            browser = p.chromium.launch(
+                headless=True,
+                args=[
+                    "--no-sandbox",
+                    "--disable-setuid-sandbox",
+                    "--disable-dev-shm-usage",
+                    "--disable-gpu",
+                    "--no-zygote",
+                    "--single-process",
+                ],
+            )
             page = browser.new_page(viewport={"width": 1080, "height": 1920})
             page.goto(f"file:///{tmp_html.replace(chr(92), '/')}")
+            page.wait_for_load_state("networkidle")
             page.wait_for_timeout(1500)  # wait for fonts + images
             page.screenshot(path=out_png, full_page=False)
             browser.close()
