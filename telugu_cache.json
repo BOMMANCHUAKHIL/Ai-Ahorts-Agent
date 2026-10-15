@@ -308,5 +308,129 @@
       "వెజిటేరియన్‌లకు హెంప్, ఆలసీ బీజ్"
     ],
     "footer": "ఆరోగ్యకర జీవనశైలి"
+  },
+  "healthy lunchbox ideas": {
+    "telugu_title": "ఆరోగ్యకర లంచ్‌బాక్స్ ఐడియాలు",
+    "telugu_subtitle": "సమతుల్య ఆహారం, సులభంగా సిద్ధం",
+    "rows": [
+      {
+        "time": "ప్రోటీన్",
+        "good_food": "grilled chicken strips",
+        "bad_food": "fried chicken nuggets",
+        "good_label": "మంద ప్రోటీన్",
+        "bad_label": "అధిక కొవ్వు"
+      },
+      {
+        "time": "కార్బ్స్",
+        "good_food": "brown rice",
+        "bad_food": "white rice",
+        "good_label": "సంపూర్ణ ధాన్యం",
+        "bad_label": "సాదా ధాన్యం"
+      },
+      {
+        "time": "కూరగాయలు",
+        "good_food": "steamed broccoli",
+        "bad_food": "potato chips",
+        "good_label": "పచ్చి కూరగాయ",
+        "bad_label": "ఉప్పు స్నాక్"
+      },
+      {
+        "time": "పండు",
+        "good_food": "apple slices",
+        "bad_food": "candied fruit",
+        "good_label": "తాజా పండు",
+        "bad_label": "చక్కెర పండు"
+      },
+      {
+        "time": "పాలు",
+        "good_food": "low-fat yogurt",
+        "bad_food": "full-fat cheese",
+        "good_label": "తక్కువ కొవ్వు",
+        "bad_label": "అధిక కొవ్వు"
+      },
+      {
+        "time": "కొవ్వు",
+        "good_food": "avocado slices",
+        "bad_food": "potato fries",
+        "good_label": "ఆరోగ్యకర కొవ్వు",
+        "bad_label": "అధిక కార్బ్"
+      },
+      {
+        "time": "హైడ్రేషన్",
+        "good_food": "water bottle",
+        "bad_food": "sugar soda",
+        "good_label": "నీటి బాటిల్",
+        "bad_label": "చక్కెర పానీయం"
+      }
+    ],
+    "tips": [
+      "ప్రతి బాక్స్‌లో ప్రోటీన్ చేర్చండి",
+      "సంపూర్ణ ధాన్యాలు ఎంచుకోండి",
+      "తాజా పండ్లు, కూరగాయలు జోడించండి",
+      "చక్కెర పానీయాలు దూరంగా ఉంచండి"
+    ],
+    "footer": "సమతుల్య జీవనం"
+  },
+  "balanced vegetarian meal": {
+    "telugu_title": "సమతుల్య శాకాహారి భోజనం",
+    "telugu_subtitle": "కార్బ్, ప్రోటీన్, కొవ్వు",
+    "rows": [
+      {
+        "time": "ఉదయం 6-7 AM",
+        "good_food": "oatmeal with nuts",
+        "bad_food": "fried dough",
+        "good_label": "సంక్లిష్ట కార్బ్స్",
+        "bad_label": "సాధారణ షుగర్"
+      },
+      {
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "Greek yogurt with fruit",
+        "bad_food": "potato chips",
+        "good_label": "ఉన్నత ప్రోటీన్",
+        "bad_label": "అధిక ఉప్పు"
+      },
+      {
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "whole grain toast with avocado",
+        "bad_food": "butter croissant",
+        "good_label": "ఆరోగ్యకర ఫ్యాట్స్",
+        "bad_label": "ట్రాన్స్ ఫ్యాట్స్"
+      },
+      {
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "brown rice with dal & veggies",
+        "bad_food": "white rice with paneer butter",
+        "good_label": "సమతుల్య ప్లేట్",
+        "bad_label": "అధిక క్యాలరీ"
+      },
+      {
+        "time": "సాయంత్రం 4-6 PM",
+        "good_food": "mixed nuts and seeds",
+        "bad_food": "sugar soda",
+        "good_label": "పోషక నట్లు",
+        "bad_label": "శూద్ధ షుగర్"
+      },
+      {
+        "time": "రాత్రి 7-8:30 PM",
+        "good_food": "quinoa salad with beans",
+        "bad_food": "fried noodles",
+        "good_label": "లైట్ డిన్నర్",
+        "bad_label": "భారీ కార్బ్స్"
+      },
+      {
+        "time": "నిద్రకు ముందు 9-10 PM",
+        "good_food": "warm milk with turmeric",
+        "bad_food": "ice cream",
+        "good_label": "సాంత్వన ప్రోటీన్",
+        "bad_label": "అధిక షుగర్"
+      }
+    ],
+    "tips": [
+      "ప్రతి భోజనంలో కార్బ్, ప్రోటీన్, కొవ్వు సమతుల్యంగా తీసుకోండి.",
+      "పూర్తి ధాన్యాలు, పప్పులు, కూరగాయలను ప్రధానంగా వాడండి.",
+      "ప్రాసెస్ చేసిన ఫాస్ట్ ఫుడ్‌ను తగ్గించండి.",
+      "నీరు ఎక్కువగా తాగి, తగిన పరిమాణంలో ఆహారం తీసుకోండి."
+    ],
+    "footer": "సమతుల్యంగా జీవించండి"
   }
 }
