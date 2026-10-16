@@ -48,30 +48,27 @@ class FoodFetcher:
     # Public API
     # ────────────────────────────────────────────────────────────────
     def fetch(self, food_description: str) -> str:
-        """Return path to a cached or newly downloaded food photo."""
         path = self._filename(food_description)
-
         if os.path.exists(path) and os.path.getsize(path) > 5000:
             return path
 
         query = self._build_query(food_description)
 
-        # Try sources in order. First one that returns a working URL wins.
-        image_url = (
-            self._try_pixabay(query)
-            or self._try_openverse(query)
-            or self._try_wikimedia(query)
-        )
-
-        if image_url:
-            try:
-                self._download_image(image_url, path)
-                print(f"    ✓ Image: {food_description} ← {image_url[:60]}...")
+        # Try every source with every candidate URL
+        sources = [
+            ("Openverse", self._try_openverse),
+            ("Wikimedia", self._try_wikimedia),
+            ("Pixabay", self._try_pixabay),
+        ]
+        for name, fn in sources:
+            url = fn(query)
+            if not url:
+                continue
+            print(f"    → trying {name}")
+            if self._download_image(url, path):
+                print(f"    ✓ Image ({name}): {food_description}")
                 return path
-            except Exception as exc:
-                print(f"    ⚠ Download failed ({exc}); using placeholder")
 
-        # Every online source failed — local placeholder
         return self._placeholder(food_description, path)
 
     # ────────────────────────────────────────────────────────────────
@@ -91,10 +88,13 @@ class FoodFetcher:
                 "q": query,
                 "image_type": "photo",
                 "orientation": "horizontal",
-                "category": "food",
+                "category": "food",  # ← only food category
                 "safesearch": "true",
-                "per_page": 5,
+                "per_page": 10,  # ← fetch more, pick better
                 "order": "popular",
+                "min_width": 400,  # ← avoid tiny images
+                "min_height": 400,
+                "editors_choice": "true",  # ← only editor-curated, higher quality
             }
 
             try:
@@ -103,19 +103,21 @@ class FoodFetcher:
                     print(f"    ⏳ Pixabay key {self._key_index % len(self.pixabay_keys)} rate-limited")
                     time.sleep(0.8)
                     continue
-                resp.raise_for_status()
-                hits = resp.json().get("hits", [])
+                data = resp.json()
+                hits = data.get("hits", [])
                 if not hits:
-                    continue
+                    params.pop("editors_choice", None)  # retry without the filter
+                    resp = requests.get(self.PIXABAY_API, params=params, timeout=15)
+                    hits = resp.json().get("hits", [])
                 hit = sorted(
                     hits,
                     key=lambda h: h.get("imageWidth", 0) * h.get("imageHeight", 0),
                     reverse=True,
                 )[0]
                 url = (
-                    hit.get("webformatURL")
-                    or hit.get("previewURL")
-                    or hit.get("largeImageURL")
+                        hit.get("webformatURL")  # ~640px — perfect for our display
+                        or hit.get("previewURL")
+                        or hit.get("largeImageURL")  # ~1280px — CDN throttles this hard
                 )
                 if url:
                     return url
@@ -195,8 +197,8 @@ class FoodFetcher:
     # ────────────────────────────────────────────────────────────────
     # Download + retry
     # ────────────────────────────────────────────────────────────────
-    def _download_image(self, url: str, path: str, max_tries: int = 4) -> None:
-        last_exc = None
+    def _download_image(self, url: str, path: str, max_tries: int = 4) -> bool:
+        """Returns True on success, False on failure (never raises)."""
         for attempt in range(max_tries):
             try:
                 resp = requests.get(
@@ -210,42 +212,64 @@ class FoodFetcher:
                     continue
                 resp.raise_for_status()
                 if len(resp.content) < 5000:
-                    raise RuntimeError("Downloaded file too small")
+                    return False
                 with open(path, "wb") as f:
                     f.write(resp.content)
-                return
+                return True
             except Exception as exc:
-                last_exc = exc
+                print(f"    ⚠ {exc}")
                 time.sleep(1.5 * (attempt + 1))
-
-        raise RuntimeError(f"Download failed after {max_tries} tries: {last_exc}")
+        return False
 
     # ────────────────────────────────────────────────────────────────
     # Placeholder (never crashes the cycle)
     # ────────────────────────────────────────────────────────────────
     def _placeholder(self, food_description: str, path: str) -> str:
-        img = Image.new("RGB", (512, 512), color=(230, 245, 230))
-        from PIL import ImageDraw
+        """Make a colorful placeholder so missing images are obvious."""
+        from PIL import Image, ImageDraw, ImageFont
+
+        W, H = 512, 512
+        img = Image.new("RGB", (W, H), color=(255, 240, 200))  # warm yellow
         draw = ImageDraw.Draw(img)
-        # Wrap text roughly
+
+        # Draw a border
+        draw.rectangle([6, 6, W - 6, H - 6], outline=(200, 130, 20), width=6)
+
+        # Wrap text
         words = food_description.split()
         lines, line = [], ""
         for w in words:
-            if len(line + " " + w) > 22:
+            candidate = (line + " " + w).strip()
+            if len(candidate) > 22 and line:
                 lines.append(line)
                 line = w
             else:
-                line = (line + " " + w).strip()
+                line = candidate
         if line:
             lines.append(line)
-        y = 200
-        for ln in lines[:5]:
-            draw.text((40, y), ln, fill=(40, 80, 40))
-            y += 40
-        img.save(path, "JPEG", quality=85)
-        print(f"    ⚠ Placeholder for: {food_description}")
-        return path
 
+        # Try to load a font, fallback to default
+        try:
+            font = ImageFont.truetype("arial.ttf", 34)
+        except Exception:
+            font = ImageFont.load_default()
+
+        # Center the text
+        y = H // 2 - (len(lines) * 20)
+        for ln in lines[:4]:
+            bbox = draw.textbbox((0, 0), ln, font=font)
+            w = bbox[2] - bbox[0]
+            draw.text(((W - w) // 2, y), ln, fill=(120, 60, 10), font=font)
+            y += 40
+
+        # Save as a tiny file so it's never treated as valid cache
+        img.save(path, "JPEG", quality=40, optimize=True)
+        # Force size below the 5000-byte cache threshold
+        if os.path.getsize(path) >= 5000:
+            # Re-save at much lower quality if still too big
+            img.save(path, "JPEG", quality=20)
+        print(f"    ⚠ Placeholder: {food_description}")
+        return path
     # ────────────────────────────────────────────────────────────────
     # Utilities
     # ────────────────────────────────────────────────────────────────
@@ -258,19 +282,66 @@ class FoodFetcher:
     @staticmethod
     def _build_query(description: str) -> str:
         d = description.lower().strip()
+        # Common food-photo searches that work well on Pixabay
         replacements = {
-            "boiled eggs": "boiled eggs",
-            "idli with sambar": "idli sambar",
-            "pesarattu with chutney": "dosa chutney",
-            "upma with vegetables": "upma",
-            "white bread toast with jam": "bread jam toast",
-            "sugary cereal": "sweet cereal bowl",
-            "fried puri": "puri fried",
-            "buttermilk": "buttermilk glass",
-            "soft drink": "soda glass",
-            "rice with dal and vegetables": "indian thali rice dal",
-            "fast food burger": "burger fast food",
-            "banana and apple": "banana apple fruit",
+            # Roti family
+            "healthy roti": "whole wheat chapati",
+            "millet roti": "bajra roti millet",
+            "plain roti": "chapati roti",
+            "white roti": "plain chapati",
+            "oil roti": "paratha oil",
+            # Paratha
+            "healthy paratha": "whole wheat paratha",
+            "oil paratha": "fried paratha",
+            "stuffed paratha": "aloo paratha",
+            # Rice
+            "rice": "cooked white rice bowl",
+            "brown rice": "brown rice bowl",
+            "rice with dal": "dal rice indian",
+            # Dal
+            "dal": "dal curry indian",
+            "spinach dal": "palak dal",
+            # Bread
+            "white bread": "white bread slices",
+            "bread jam": "bread with jam",
+            "whole wheat bread": "brown bread loaf",
+            # Snacks
+            "samosa": "samosa fried",
+            "pakora": "pakora indian snack",
             "biscuits": "cookies biscuits",
+            "chips": "potato chips",
+            "namkeen": "indian namkeen snack",
+            # Drinks
+            "buttermilk": "buttermilk glass",
+            "soft drink": "cola glass soda",
+            "tea": "indian chai tea",
+            "coffee": "black coffee cup",
+            "water": "glass of water",
+            # Produce
+            "banana": "banana fruit",
+            "apple": "red apple fruit",
+            "spinach": "fresh spinach leaves",
+            "tomato": "ripe tomatoes",
+            "carrot": "fresh carrots",
+            # Meals
+            "healthy meal": "indian thali balanced",
+            "balanced meal": "indian thali vegetables",
+            "salad": "fresh vegetable salad",
         }
-        return replacements.get(d, d)
+        # Exact match first
+        if d in replacements:
+            return replacements[d]
+        # Then try substring matches
+        for key, val in replacements.items():
+            if key in d:
+                return val
+        # Fallback: strip filler words
+        fillers = ["healthy", "unhealthy", "good", "bad", "fresh", "the", "a", "an"]
+        words = [w for w in d.split() if w not in fillers]
+        return " ".join(words) if words else "indian food"
+
+    def clear_cache(self, food_description: str):
+        path = self._filename(food_description)
+        if os.path.exists(path):
+            os.remove(path)
+            print(f"    ↻ Cleared cache for: {food_description}")

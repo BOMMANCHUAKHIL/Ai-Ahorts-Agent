@@ -2,7 +2,7 @@ name: Shorts Agent Cycle
 
 on:
   schedule:
-    - cron: '0 * * * *'   # every hour
+    - cron: '0 */3 * * *'   # every hour
   workflow_dispatch:       # manual trigger button
 
 jobs:
