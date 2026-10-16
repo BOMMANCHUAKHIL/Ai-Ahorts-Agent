@@ -1,808 +1,188 @@
 {
-  "traditional indian nutritious foods": {
-    "telugu_title": "పారంపరిక ఆహారం",
-    "telugu_subtitle": "సమయానికి సరైన ఎంపికలు",
-    "rows": [
-      {
-        "time": "ఉదయం 6-7 AM",
-        "good_food": "millet porridge",
-        "bad_food": "refined wheat porridge",
-        "good_label": "పారంపరిక అల్పాహారం",
-        "bad_label": "అసమతుల్య అల్పాహారం"
-      },
-      {
-        "time": "ఉదయం 7-9 AM",
-        "good_food": "spiced chickpea sundal",
-        "bad_food": "potato chips",
-        "good_label": "పారంపరిక బ్రేక్‌ఫాస్ట్",
-        "bad_label": "అనారోగ్య బ్రేక్‌ఫాస్ట్"
-      },
-      {
-        "time": "మధ్యాహ్నం 10-11 AM",
-        "good_food": "coconut water",
-        "bad_food": "sugar soda",
-        "good_label": "తాజా పానీయం",
-        "bad_label": "సుక్కు పానీయం"
-      },
-      {
-        "time": "మధ్యాహ్నం 12-2 PM",
-        "good_food": "vegetable sambar with brown rice",
-        "bad_food": "fried rice with gravy",
-        "good_label": "పోషకాహార భోజనం",
-        "bad_label": "అనారోగ్య భోజనం"
-      },
-      {
-        "time": "సాయంత్రం 4-6 PM",
-        "good_food": "roasted peanuts",
-        "bad_food": "fried pakoras",
-        "good_label": "స్నాక్ ఆరోగ్యం",
-        "bad_label": "అనారోగ్య స్నాక్"
-      },
-      {
-        "time": "రాత్రి 7-8:30 PM",
-        "good_food": "millet dosa with chutney",
-        "bad_food": "butter naan with butter",
-        "good_label": "సమతుల్య రాత్రి",
-        "bad_label": "అసమతుల్య రాత్రి"
-      },
-      {
-        "time": "నిద్రకు ముందు 9-10 PM",
-        "good_food": "warm milk with turmeric",
-        "bad_food": "chocolate bar",
-        "good_label": "శాంతి పానీయం",
-        "bad_label": "అనారోగ్య పానీయం"
-      }
-    ],
-    "tips": [
-      "ప్రతి రోజు వేర్వేరు ధాన్యాలు తీసుకోండి.",
-      "సీజన్ పండ్లు, కూరగాయలు ఎక్కువగా తినండి.",
-      "తక్కువ నూనె, ఎక్కువ మసాలా వాడండి.",
-      "స్నాక్‌లో వేరుశెనగ, ముంచు విత్తనాలు ఎంచుకోండి."
-    ],
-    "footer": "ఆరోగ్యమే సంపద"
-  },
-  "hydration and drinking water": {
-    "telugu_title": "రోజు నీటి తీసుకోవడం",
-    "telugu_subtitle": "8 గ్లాసులు నీరు అవసరం",
-    "rows": [
-      {
-        "time": "నీటి",
-        "good_food": "plain water",
-        "bad_food": "sugar soda",
-        "good_label": "స్వచ్ఛ నీరు",
-        "bad_label": "చక్కెర సోడా"
-      },
-      {
-        "time": "హైడ్రేషన్",
-        "good_food": "cold water",
-        "bad_food": "energy drink",
-        "good_label": "చల్లని నీరు",
-        "bad_label": "ఎనర్జీ డ్రింక్"
-      },
-      {
-        "time": "జలయుక్త",
-        "good_food": "room temperature water",
-        "bad_food": "fruit juice with sugar",
-        "good_label": "గది వేడి నీరు",
-        "bad_label": "చక్కెర పండు రసం"
-      },
-      {
-        "time": "పానీయం",
-        "good_food": "herbal tea without sugar",
-        "bad_food": "sweetened coffee",
-        "good_label": "చక్కెర లేని టీ",
-        "bad_label": "చక్కెర కలిగిన కాఫీ"
-      },
-      {
-        "time": "సమతుల్య",
-        "good_food": "infused water with lemon",
-        "bad_food": "sports drink",
-        "good_label": "నిమ్మ నీరు",
-        "bad_label": "స్పోర్ట్స్ డ్రింక్"
-      },
-      {
-        "time": "ద్రవాలు",
-        "good_food": "sparkling water (unsweetened)",
-        "bad_food": "sweet soda",
-        "good_label": "స్పార్క్లింగ్ నీరు",
-        "bad_label": "స్వీట్ సోడా"
-      },
-      {
-        "time": "వాటర్",
-        "good_food": "water bottle on desk",
-        "bad_food": "alcoholic beverage",
-        "good_label": "డెస్క్ పై నీరు",
-        "bad_label": "మద్యం పానీయం"
-      }
-    ],
-    "tips": [
-      "ప్రతి గంటకు ఒక గ్లాసు నీరు త్రాగండి.",
-      "ఉదయపు లేచిన వెంటనే గ్లాసు నీరు సేవించండి.",
-      "భోజన సమయంలో కూడా నీటిని మిస్ చేయకండి.",
-      "సూక్ష్మంగా చల్లని లేదా గది వేడి నీటిని ఇష్టపడండి."
-    ],
-    "footer": "నీరు జీవం, ఆరోగ్యం"
-  },
-  "portion control explained visually": {
-    "telugu_title": "పోర్షన్ పరిమాణం ముఖ్యము",
-    "telugu_subtitle": "ఆహార ఎంపిక కంటే పరిమాణం ముఖ్యం",
-    "rows": [
-      {
-        "time": "పోర్షన్ 1",
-        "good_food": "small bowl of oats",
-        "bad_food": "large bowl of oats",
-        "good_label": "చిన్న పరిమాణం",
-        "bad_label": "అధిక పరిమాణం"
-      },
-      {
-        "time": "పోర్షన్ 2",
-        "good_food": "handful of almonds",
-        "bad_food": "cup of almonds",
-        "good_label": "సరైన పరిమాణం",
-        "bad_label": "అధిక పరిమాణం"
-      },
-      {
-        "time": "పోర్షన్ 3",
-        "good_food": "one apple",
-        "bad_food": "two apples",
-        "good_label": "ఒక్క ఫలం",
-        "bad_label": "అధిక ఫలం"
-      },
-      {
-        "time": "పోర్షన్ 4",
-        "good_food": "half plate rice",
-        "bad_food": "full plate rice",
-        "good_label": "సగం బౌల్",
-        "bad_label": "పూర్తి బౌల్"
-      },
-      {
-        "time": "పోర్షన్ 5",
-        "good_food": "cup of dal",
-        "bad_food": "two cups dal",
-        "good_label": "ఒక కప్పు",
-        "bad_label": "రెండు కప్పులు"
-      },
-      {
-        "time": "పోర్షన్ 6",
-        "good_food": "grilled chicken piece",
-        "bad_food": "fried chicken piece",
-        "good_label": "చిన్న ముక్క",
-        "bad_label": "పెద్ద ముక్క"
-      },
-      {
-        "time": "పోర్షన్ 7",
-        "good_food": "small piece cake",
-        "bad_food": "large piece cake",
-        "good_label": "చిన్న మిఠాయి",
-        "bad_label": "పెద్ద మిఠాయి"
-      }
-    ],
-    "tips": [
-      "ప్లేట్ పరిమాణాన్ని గమనించండి",
-      "సర్వింగ్ లను ముందుగా నిర్ణయించండి",
-      "చిన్న బౌల్ లో తినండి",
-      "అతి తినడం నివారించండి"
-    ],
-    "footer": "చిన్నదే మంచిది"
-  },
-  "fermented foods for gut health": {
-    "telugu_title": "గట్ ఆరోగ్యానికి ఫెర్మెంట్ ఫుడ్స్",
-    "telugu_subtitle": "దోస ఐడ్లీ యోగర్ట్‌తో బాక్టీరియా",
-    "rows": [
-      {
-        "time": "ఉదయం 6-7 AM",
-        "good_food": "plain curd",
-        "bad_food": "flavored yogurt with sugar",
-        "good_label": "ప్రోబయాటిక్ యోగర్ట్",
-        "bad_label": "స్వీటెండ్ యోగర్ట్"
-      },
-      {
-        "time": "ఉదయం 7-9 AM",
-        "good_food": "steamed idli",
-        "bad_food": "fried idli sticks",
-        "good_label": "స్వచ్ఛ ఐడ్లీ",
-        "bad_label": "వెన్న ఐడ్లీ"
-      },
-      {
-        "time": "మధ్యాహ్నం 10-11 AM",
-        "good_food": "fermented dosa batter",
-        "bad_food": "plain dosa with butter",
-        "good_label": "బట్టర్ లెస్ దోస",
-        "bad_label": "బట్టర్ దోస"
-      },
-      {
-        "time": "మధ్యాహ్నం 12-2 PM",
-        "good_food": "curd with fruit",
-        "bad_food": "sweet curd with syrup",
-        "good_label": "పండ్ల యోగర్ట్",
-        "bad_label": "సిరప్ యోగర్ట్"
-      },
-      {
-        "time": "సాయంత్రం 4-6 PM",
-        "good_food": "idli with sambar",
-        "bad_food": "idli with ketchup",
-        "good_label": "సాంబార్ ఐడ్లీ",
-        "bad_label": "కెచప్ ఐడ్లీ"
-      },
-      {
-        "time": "రాత్రి 7-8:30 PM",
-        "good_food": "dosa with chutney",
-        "bad_food": "dosa with cheese sauce",
-        "good_label": "చట్నీ దోస",
-        "bad_label": "చీజ్ సాస్ దోస"
-      },
-      {
-        "time": "నిద్రకు ముందు 9-10 PM",
-        "good_food": "small bowl curd",
-        "bad_food": "cream cheese dip",
-        "good_label": "రాత్రి యోగర్ట్",
-        "bad_label": "క్రీమ్ చీజ్"
-      }
-    ],
-    "tips": [
-      "ప్రతిరోజు 2-3 సర్వింగ్స్ ఫెర్మెంట్ ఆహారం తీసుకోండి.",
-      "సూచనలుగా పంచదార లేకుండా యోగర్ట్ ఎంచుకోండి.",
-      "వేపుడు కాకుండా ఆవిరిలో వండిన ఐడ్లీ తినండి.",
-      "చట్నీ లేదా సాంబార్‌తో దోసను ఆస్వాదించండి."
-    ],
-    "footer": "స్వచ్ఛ గట్, సంతోష జీవితం"
-  },
   "foods rich in omega-3": {
-    "telugu_title": "ఓమెగా-3 సంపన్న ఆహారాలు",
-    "telugu_subtitle": "మెదడు, హృదయానికి లాభకరము",
+    "telugu_title": "ఓమేగా-3 సమృద్ధి ఆహారాలు",
+    "telugu_subtitle": "మెదడు హృదయానికి శక్తి",
     "rows": [
       {
         "time": "ఉదయం 6-7 AM",
-        "good_food": "salmon fillet",
-        "bad_food": "bacon strips",
-        "good_label": "సాల్మన్ ముక్క",
-        "bad_label": "బేకన్ ముక్క"
-      },
-      {
-        "time": "ఉదయం 7-9 AM",
-        "good_food": "flaxseed toast",
-        "bad_food": "buttered toast",
-        "good_label": "అలసీ బియ్యం",
-        "bad_label": "వెన్న టోస్ట్"
-      },
-      {
-        "time": "మధ్యాహ్నం 10-11 AM",
-        "good_food": "chia pudding",
-        "bad_food": "sugar pudding",
-        "good_label": "చియా పుడ్డింగ్",
-        "bad_label": "సక్కర పుడ్డింగ్"
-      },
-      {
-        "time": "మధ్యాహ్నం 12-2 PM",
-        "good_food": "grilled sardines",
+        "good_food": "salmon",
         "bad_food": "fried chicken",
-        "good_label": "గ్రిల్ సర్డిన్",
-        "bad_label": "వెయ్యి చికెన్"
+        "good_label": "సాల్మన్",
+        "bad_label": "ఫ్రైడ్ చికెన్"
       },
       {
-        "time": "సాయంత్రం 4-6 PM",
-        "good_food": "walnut salad",
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "flaxseed",
         "bad_food": "potato chips",
-        "good_label": "అఖరోట సలాద్",
-        "bad_label": "ఉప్పు చిప్స్"
+        "good_label": "ఫ్లాక్స్ సీడ్స్",
+        "bad_label": "పొటాటో చిప్స్"
       },
       {
-        "time": "రాత్రి 7-8:30 PM",
-        "good_food": "mackerel curry",
-        "bad_food": "cream sauce pasta",
-        "good_label": "మాకరెల్ కర్రీ",
-        "bad_label": "క్రీమ్ పాస్తా"
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "walnuts",
+        "bad_food": "butter",
+        "good_label": "అఖ్రోట్",
+        "bad_label": "బట్టర్"
       },
       {
-        "time": "నిద్రకు ముందు 9-10 PM",
-        "good_food": "hemp seed milk",
-        "bad_food": "ice cream",
-        "good_label": "హెంప్ పాలు",
-        "bad_label": "ఐస్ క్రీమ్"
-      }
-    ],
-    "tips": [
-      "ప్రతి రోజూ సాల్మన్ లేదా అలసీ తీసుకోండి",
-      "వంటలో బేకింగ్ లేదా గ్రిల్లింగ్ ఎంపికలు",
-      "స్నాక్‌లో అఖరోట, చియా, ఫ్లాక్సీడ్",
-      "వెజిటేరియన్‌లకు హెంప్, ఆలసీ బీజ్"
-    ],
-    "footer": "ఆరోగ్యకర జీవనశైలి"
-  },
-  "healthy lunchbox ideas": {
-    "telugu_title": "ఆరోగ్యకర లంచ్‌బాక్స్ ఐడియాలు",
-    "telugu_subtitle": "సమతుల్య ఆహారం, సులభంగా సిద్ధం",
-    "rows": [
-      {
-        "time": "ప్రోటీన్",
-        "good_food": "grilled chicken strips",
-        "bad_food": "fried chicken nuggets",
-        "good_label": "మంద ప్రోటీన్",
-        "bad_label": "అధిక కొవ్వు"
-      },
-      {
-        "time": "కార్బ్స్",
-        "good_food": "brown rice",
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "chia seeds",
         "bad_food": "white rice",
-        "good_label": "సంపూర్ణ ధాన్యం",
-        "bad_label": "సాదా ధాన్యం"
-      },
-      {
-        "time": "కూరగాయలు",
-        "good_food": "steamed broccoli",
-        "bad_food": "potato chips",
-        "good_label": "పచ్చి కూరగాయ",
-        "bad_label": "ఉప్పు స్నాక్"
-      },
-      {
-        "time": "పండు",
-        "good_food": "apple slices",
-        "bad_food": "candied fruit",
-        "good_label": "తాజా పండు",
-        "bad_label": "చక్కెర పండు"
-      },
-      {
-        "time": "పాలు",
-        "good_food": "low-fat yogurt",
-        "bad_food": "full-fat cheese",
-        "good_label": "తక్కువ కొవ్వు",
-        "bad_label": "అధిక కొవ్వు"
-      },
-      {
-        "time": "కొవ్వు",
-        "good_food": "avocado slices",
-        "bad_food": "potato fries",
-        "good_label": "ఆరోగ్యకర కొవ్వు",
-        "bad_label": "అధిక కార్బ్"
-      },
-      {
-        "time": "హైడ్రేషన్",
-        "good_food": "water bottle",
-        "bad_food": "sugar soda",
-        "good_label": "నీటి బాటిల్",
-        "bad_label": "చక్కెర పానీయం"
-      }
-    ],
-    "tips": [
-      "ప్రతి బాక్స్‌లో ప్రోటీన్ చేర్చండి",
-      "సంపూర్ణ ధాన్యాలు ఎంచుకోండి",
-      "తాజా పండ్లు, కూరగాయలు జోడించండి",
-      "చక్కెర పానీయాలు దూరంగా ఉంచండి"
-    ],
-    "footer": "సమతుల్య జీవనం"
-  },
-  "balanced vegetarian meal": {
-    "telugu_title": "సమతుల్య శాకాహారి భోజనం",
-    "telugu_subtitle": "కార్బ్, ప్రోటీన్, కొవ్వు",
-    "rows": [
-      {
-        "time": "ఉదయం 6-7 AM",
-        "good_food": "oatmeal with nuts",
-        "bad_food": "fried dough",
-        "good_label": "సంక్లిష్ట కార్బ్స్",
-        "bad_label": "సాధారణ షుగర్"
-      },
-      {
-        "time": "ఉదయం 7-9 AM",
-        "good_food": "Greek yogurt with fruit",
-        "bad_food": "potato chips",
-        "good_label": "ఉన్నత ప్రోటీన్",
-        "bad_label": "అధిక ఉప్పు"
-      },
-      {
-        "time": "మధ్యాహ్నం 10-11 AM",
-        "good_food": "whole grain toast with avocado",
-        "bad_food": "butter croissant",
-        "good_label": "ఆరోగ్యకర ఫ్యాట్స్",
-        "bad_label": "ట్రాన్స్ ఫ్యాట్స్"
-      },
-      {
-        "time": "మధ్యాహ్నం 12-2 PM",
-        "good_food": "brown rice with dal & veggies",
-        "bad_food": "white rice with paneer butter",
-        "good_label": "సమతుల్య ప్లేట్",
-        "bad_label": "అధిక క్యాలరీ"
+        "good_label": "చియా సీడ్స్",
+        "bad_label": "తెల్ల అన్నం"
       },
       {
         "time": "సాయంత్రం 4-6 PM",
-        "good_food": "mixed nuts and seeds",
-        "bad_food": "sugar soda",
-        "good_label": "పోషక నట్లు",
-        "bad_label": "శూద్ధ షుగర్"
+        "good_food": "mackerel",
+        "bad_food": "fried puri",
+        "good_label": "మాకరెల్",
+        "bad_label": "వేయించిన పూరీ"
       },
       {
         "time": "రాత్రి 7-8:30 PM",
-        "good_food": "quinoa salad with beans",
-        "bad_food": "fried noodles",
-        "good_label": "లైట్ డిన్నర్",
-        "bad_label": "భారీ కార్బ్స్"
-      },
-      {
-        "time": "నిద్రకు ముందు 9-10 PM",
-        "good_food": "warm milk with turmeric",
-        "bad_food": "ice cream",
-        "good_label": "సాంత్వన ప్రోటీన్",
-        "bad_label": "అధిక షుగర్"
-      }
-    ],
-    "tips": [
-      "ప్రతి భోజనంలో కార్బ్, ప్రోటీన్, కొవ్వు సమతుల్యంగా తీసుకోండి.",
-      "పూర్తి ధాన్యాలు, పప్పులు, కూరగాయలను ప్రధానంగా వాడండి.",
-      "ప్రాసెస్ చేసిన ఫాస్ట్ ఫుడ్‌ను తగ్గించండి.",
-      "నీరు ఎక్కువగా తాగి, తగిన పరిమాణంలో ఆహారం తీసుకోండి."
-    ],
-    "footer": "సమతుల్యంగా జీవించండి"
-  },
-  "healthy rotis and parathas": {
-    "telugu_title": "ఆరోగ్యకర రొట్టె ఎంపికలు",
-    "telugu_subtitle": "మిల్లెట్ రొట్టెతో ఫైబర్ పెంచండి",
-    "rows": [
-      {
-        "time": "ఉదయం 6-7 AM",
-        "good_food": "millet roti",
-        "bad_food": "white flour roti",
-        "good_label": "ఆరోగ్యకర రొట్టి",
-        "bad_label": "అస్వస్థ రొట్టి"
-      },
-      {
-        "time": "ఉదయం 7-9 AM",
-        "good_food": "millet paratha",
-        "bad_food": "butter paratha",
-        "good_label": "పోషక పరాథా",
-        "bad_label": "కొవ్వు పరాథా"
-      },
-      {
-        "time": "మధ్యాహ్నం 10-11 AM",
-        "good_food": "millet roti with veg",
-        "bad_food": "fried naan",
-        "good_label": "పోషక రొట్టి",
-        "bad_label": "తేలిక నాన్"
-      },
-      {
-        "time": "మధ్యాహ్నం 12-2 PM",
-        "good_food": "millet roti lunch",
-        "bad_food": "potato paratha",
-        "good_label": "సమతుల్య భోజనం",
-        "bad_label": "అధిక కార్బ్"
-      },
-      {
-        "time": "సాయంత్రం 4-6 PM",
-        "good_food": "millet roti snack",
-        "bad_food": "deep fried paratha",
-        "good_label": "తేలిక స్నాక్",
-        "bad_label": "అధిక చর্বి"
-      },
-      {
-        "time": "రాత్రి 7-8:30 PM",
-        "good_food": "millet roti dinner",
-        "bad_food": "white rice",
-        "good_label": "సంతులిత రాత్రి",
-        "bad_label": "సాధారణ భోజనం"
-      },
-      {
-        "time": "నిద్రకు ముందు 9-10 PM",
-        "good_food": "millet roti with curd",
-        "bad_food": "crackers",
-        "good_label": "సున్నిత రాత్రి",
-        "bad_label": "అధిక ఉప్పు"
-      }
-    ],
-    "tips": [
-      "మిల్లెట్ రొట్టె రోజుకు ఒకటి లేదా రెండు తీసుకోండి.",
-      "బియ్యం బదులుగా మిల్లెట్ రొట్టెతో ఫైబర్ పెంచండి.",
-      "పరాథా తయారు చేసేటప్పుడు ఎక్కువ నూనె వాడకండి.",
-      "రొట్టెతో పచ్చి కూరగాయలు, పప్పులు కలిపి తినండి."
-    ],
-    "footer": "ఆరోగ్యమే శక్తి"
-  },
-  "healthy sweets and desserts": {
-    "telugu_title": "స్వీట్స్‌లో ఆరోగ్యం",
-    "telugu_subtitle": "డేట్స్, జాగ్రి vs చక్కెర",
-    "rows": [
-      {
-        "time": "డేట్స్",
-        "good_food": "dates stuffed nuts",
-        "bad_food": "sugar candy",
-        "good_label": "డేట్స్ మిఠాయి",
-        "bad_label": "చక్కెర క్యాండీ"
-      },
-      {
-        "time": "జాగ్రి",
-        "good_food": "jaggery laddoo",
-        "bad_food": "refined sugar laddoo",
-        "good_label": "జాగ్రి లడ్డు",
-        "bad_label": "చక్కెర లడ్డు"
-      },
-      {
-        "time": "పండు మిఠాయి",
-        "good_food": "fruit salad with honey",
-        "bad_food": "fruit jam with sugar",
-        "good_label": "పండు సలాడ్",
-        "bad_label": "చక్కెర జామ్"
-      },
-      {
-        "time": "ఓట్స్ బిస్కెట్",
-        "good_food": "oats banana cookies",
-        "bad_food": "butter cookies",
-        "good_label": "ఓట్స్ బిస్కెట్",
-        "bad_label": "బటర్ బిస్కెట్"
-      },
-      {
-        "time": "స్వీట్ పొటాటో",
-        "good_food": "sweet potato halwa",
-        "bad_food": "regular halwa",
-        "good_label": "బంగాళదుంప హల్వా",
-        "bad_label": "సాధారణ హల్వా"
-      },
-      {
-        "time": "కోబ్బర లడ్డు",
-        "good_food": "coconut jaggery laddu",
-        "bad_food": "coconut sugar laddu",
-        "good_label": "కోబ్బర లడ్డు",
-        "bad_label": "చక్కెర లడ్డు"
-      },
-      {
-        "time": "కల్చి",
-        "good_food": "date and nut bar",
-        "bad_food": "chocolate bar",
-        "good_label": "డేట్ బార్",
-        "bad_label": "చాక్లెట్ బార్"
-      }
-    ],
-    "tips": [
-      "చక్కెర బదులు డేట్స్ లేదా జాగ్రి ఉపయోగించండి.",
-      "స్వీట్స్‌లో పండ్లు, నట్లు జోడించండి.",
-      "బేకింగ్‌లో బట్టర్ బదులు ఆవకాడో లేదా యోగర్ట్ పెట్టండి.",
-      "పోర్షన్ పరిమాణాన్ని నియంత్రించండి."
-    ],
-    "footer": "ఆరోగ్యకరంగా మధురంగా"
-  },
-  "smoothies with indian fruits": {
-    "telugu_title": "ఫల స్మూతీ ఆరోగ్యం",
-    "telugu_subtitle": "బనానా, మామిడి తో క్రీమీ స్మూతీ",
-    "rows": [
-      {
-        "time": "ఉదయం 6-7 AM",
-        "good_food": "banana mango smoothie",
-        "bad_food": "sugar soda",
-        "good_label": "పోషక స్మూతీ",
-        "bad_label": "చక్కెర పానీయం"
-      },
-      {
-        "time": "ఉదయం 7-9 AM",
-        "good_food": "pineapple banana smoothie",
-        "bad_food": "flavored yogurt drink",
-        "good_label": "పండ్ల స్మూతీ",
-        "bad_label": "తీపి పానీయం"
-      },
-      {
-        "time": "మధ్యాహ్నం 10-11 AM",
-        "good_food": "mango papaya smoothie",
-        "bad_food": "sweetened milkshake",
-        "good_label": "విటమిన్ స్మూతీ",
-        "bad_label": "అధిక చక్కెర"
-      },
-      {
-        "time": "మధ్యాహ్నం 12-2 PM",
-        "good_food": "banana spinach smoothie",
-        "bad_food": "energy drink",
-        "good_label": "ప్రోటీన్ స్మూతీ",
-        "bad_label": "కాఫీ పానీయం"
-      },
-      {
-        "time": "సాయంత్రం 4-6 PM",
-        "good_food": "orange banana smoothie",
-        "bad_food": "sugar lemonade",
-        "good_label": "విటమిన్ C స్మూతీ",
-        "bad_label": "చక్కెర లెమొనేడ్"
-      },
-      {
-        "time": "రాత్రి 7-8:30 PM",
-        "good_food": "mango coconut smoothie",
-        "bad_food": "cream soda",
-        "good_label": "క్రీమి స్మూతీ",
-        "bad_label": "క్రీమ్ సోడా"
-      },
-      {
-        "time": "నిద్రకు ముందు 9-10 PM",
-        "good_food": "banana almond smoothie",
-        "bad_food": "chocolate milkshake",
-        "good_label": "నిద్ర స్మూతీ",
-        "bad_label": "చాక్లెట్ షేక్"
-      }
-    ],
-    "tips": [
-      "స్మూతీకి పండ్లు మాత్రమే వాడండి.",
-      "చక్కెర లేకుండా సహజ తీపి కోసం పండ్లు ఎంపిక చేయండి.",
-      "ప్రోటీన్ కోసం నట్ లేదా యోగర్ట్ జోడించండి.",
-      "పానీయం తక్కువ ఉష్ణోగ్రతలో సేవించండి."
-    ],
-    "footer": "స్వాస్థ్యంగా స్మూతీ"
-  },
-  "iron-rich foods": {
-    "telugu_title": "ఐరన్ సమృద్ధి ఆహారాలు",
-    "telugu_subtitle": "శక్తి కోసం ఐరన్",
-    "rows": [
-      {
-        "time": "ఉదయం 6-7 AM",
-        "good_food": "spinach smoothie",
-        "bad_food": "white toast",
-        "good_label": "ఐరన్ సమృద్ధి",
-        "bad_label": "ఐరన్ లేమి"
-      },
-      {
-        "time": "ఉదయం 7-9 AM",
-        "good_food": "date and nut bar",
-        "bad_food": "sugar cereal",
-        "good_label": "ఐరన్ సమృద్ధి",
-        "bad_label": "ఐరన్ లేమి"
-      },
-      {
-        "time": "మధ్యాహ్నం 10-11 AM",
-        "good_food": "lentil soup",
-        "bad_food": "cream soup",
-        "good_label": "ఐరన్ సమృద్ధి",
-        "bad_label": "ఐరన్ లేమి"
-      },
-      {
-        "time": "మధ్యాహ్నం 12-2 PM",
-        "good_food": "chickpea salad",
-        "bad_food": "potato chips",
-        "good_label": "ఐరన్ సమృద్ధి",
-        "bad_label": "ఐరన్ లేమి"
-      },
-      {
-        "time": "సాయంత్రం 4-6 PM",
-        "good_food": "pumpkin seed snack",
-        "bad_food": "fried snacks",
-        "good_label": "ఐరన్ సమృద్ధి",
-        "bad_label": "ఐరన్ లేమి"
-      },
-      {
-        "time": "రాత్రి 7-8:30 PM",
-        "good_food": "beef stir fry",
-        "bad_food": "butter naan",
-        "good_label": "ఐరన్ సమృద్ధి",
-        "bad_label": "ఐరన్ లేమి"
-      },
-      {
-        "time": "నిద్రకు ముందు 9-10 PM",
-        "good_food": "orange slices",
-        "bad_food": "chocolate",
-        "good_label": "ఐరన్ సమృద్ధి",
-        "bad_label": "ఐరన్ లేమి"
-      }
-    ],
-    "tips": [
-      "ఐరన్ శోషణకు విటమిన్ C తీసుకోండి.",
-      "చాయ్ లేదా కాఫీని భోజనంతో పాటు తాగవద్దు.",
-      "పచ్చి ఆకుకూరలు, పప్పులు రోజుకు చేర్చండి.",
-      "వంటలో కాస్ట్ ఐరన్ పాన్ ఉపయోగించండి."
-    ],
-    "footer": "బలంగా ఉండండి"
-  },
-  "salads with indian ingredients": {
-    "telugu_title": "కచుంబర్: ఆరోగ్యకర సలాడ్",
-    "telugu_subtitle": "ఇండియన్ పదార్థాలతో తేలికైన సలాడ్",
-    "rows": [
-      {
-        "time": "ఉదయం 6-7 AM",
-        "good_food": "cucumber tomato salad",
-        "bad_food": "fried samosa",
-        "good_label": "తాజా కచుంబర్",
-        "bad_label": "వేపుడు స్నాక్"
-      },
-      {
-        "time": "ఉదయం 7-9 AM",
-        "good_food": "onion carrot salad",
-        "bad_food": "butter toast",
-        "good_label": "కూరగాయల సలాడ్",
-        "bad_label": "బట్టర్ బ్రెడ్"
-      },
-      {
-        "time": "మధ్యాహ్నం 10-11 AM",
-        "good_food": "mint coriander salad",
-        "bad_food": "potato chips",
-        "good_label": "పుదీనా సలాడ్",
-        "bad_label": "చిప్స్ స్నాక్"
-      },
-      {
-        "time": "మధ్యాహ్నం 12-2 PM",
-        "good_food": "mixed veggie kachumber",
-        "bad_food": "creamy pasta",
-        "good_label": "మిక్స్ కచుంబర్",
-        "bad_label": "క్రీమ్ పాస్టా"
-      },
-      {
-        "time": "సాయంత్రం 4-6 PM",
-        "good_food": "radish cucumber salad",
-        "bad_food": "fried pakora",
-        "good_label": "ముల్లంగి సలాడ్",
-        "bad_label": "వేపుడు పకోడీ"
-      },
-      {
-        "time": "రాత్రి 7-8:30 PM",
-        "good_food": "spinach tomato salad",
+        "good_food": "sardines",
         "bad_food": "cheese pizza",
-        "good_label": "పాలకూర టమాటో",
+        "good_label": "సార్డైన్స్",
         "bad_label": "చీజ్ పిజ్జా"
       },
       {
         "time": "నిద్రకు ముందు 9-10 PM",
-        "good_food": "light lemon salad",
-        "bad_food": "ice cream",
-        "good_label": "నిమ్మకాయ సలాడ్",
-        "bad_label": "ఐస్ క్రీమ్"
+        "good_food": "egg yolk",
+        "bad_food": "candy",
+        "good_label": "గుడ్డు పచ్చ",
+        "bad_label": "క్యాండీ"
       }
     ],
     "tips": [
-      "కచుంబర్‌లో నీరు ఎక్కువ, హైడ్రేషన్‌కు మంచిది.",
-      "తాజా కూరగాయలు రోజుకు ఒకసారి తీసుకోండి.",
-      "సలాడ్‌లో నిమ్మరసం లేదా చింతపండు రసం వేసి రుచి పెంచండి.",
-      "సలాడ్‌ను బాగా కలిపి, నూనె పరిమితంగా ఉపయోగించండి."
+      "ప్రతి రోజూ ఓమేగా-3 ఆహారం తీసుకోండి",
+      "వంటలో నూనె బదులు చేపలు గింజలు వాడండి",
+      "బ్రేక్‌ఫాస్ట్‌లో ఫ్లాక్స్ సీడ్స్ చేర్చండి",
+      "ప్రాసెస్డ్ ఫుడ్స్ తగ్గించండి"
     ],
-    "footer": "తాజా తినండి, ఆరోగ్యంగా"
+    "footer": "సమతుల్య జీవనం"
   },
-  "fiber-rich fruits and vegetables": {
-    "telugu_title": "ఫైబర్‑సమృద్ధి పండ్లు & కూరగాయలు",
-    "telugu_subtitle": "జీర్ణానికి సహాయపడే ఫైబర్",
+  "whole grains and millets": {
+    "telugu_title": "సమతుల్య ధాన్యాలు",
+    "telugu_subtitle": "పోషక ఫైబర్ ఖనిజాలు",
     "rows": [
       {
-        "time": "ఫైబర్",
-        "good_food": "Apple",
-        "bad_food": "Potato chips",
-        "good_label": "ఆపిల్",
+        "time": "ఉదయం 6-7 AM",
+        "good_food": "whole wheat roti",
+        "bad_food": "white roti",
+        "good_label": "గోధుమ రొట్టె",
+        "bad_label": "తెల్ల రొట్టె"
+      },
+      {
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "millet porridge",
+        "bad_food": "white rice",
+        "good_label": "మిల్లెట్ పాయసం",
+        "bad_label": "తెల్ల అన్నం"
+      },
+      {
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "brown rice",
+        "bad_food": "refined rice",
+        "good_label": "గోధుమ అన్నం",
+        "bad_label": "తెల్ల అన్నం"
+      },
+      {
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "millet dosa",
+        "bad_food": "plain dosa",
+        "good_label": "మిల్లెట్ దోస",
+        "bad_label": "సాదా దోస"
+      },
+      {
+        "time": "సాయంత్రం 4-6 PM",
+        "good_food": "millet salad",
+        "bad_food": "potato chips",
+        "good_label": "మిల్లెట్ సలాడ్",
+        "bad_label": "ఆలుగడ్డ చిప్స్"
+      },
+      {
+        "time": "రాత్రి 7-8:30 PM",
+        "good_food": "whole grain cereal",
+        "bad_food": "sugar cereal",
+        "good_label": "గోధుమ సీరియల్",
+        "bad_label": "చక్కెర సీరియల్"
+      },
+      {
+        "time": "నిద్రకు ముందు 9-10 PM",
+        "good_food": "millet cookies",
+        "bad_food": "white biscuits",
+        "good_label": "మిల్లెట్ బిస్కెట్",
+        "bad_label": "తెల్ల బిస్కెట్"
+      }
+    ],
+    "tips": [
+      "ప్రతి భోజనంలో గోధుమ లేదా మిల్లెట్ చేర్చండి",
+      "తెల్ల అన్నం బదులు బ్రౌన్ రైస్ తినండి",
+      "పోషక ఫైబర్ కోసం మిల్లెట్ పాయసం తీసుకోండి",
+      "స్నాక్స్‌లో చిప్స్ బదులు మిల్లెట్ బిస్కెట్ ఎంచుకోండి"
+    ],
+    "footer": "ధాన్యాలు శక్తి"
+  },
+  "balanced grains": {
+    "telugu_title": "సమతుల్య ధాన్యాలు",
+    "telugu_subtitle": "రోజు మొత్తం శక్తి",
+    "rows": [
+      {
+        "time": "ఉదయం 6-7 AM",
+        "good_food": "millet porridge",
+        "bad_food": "white rice",
+        "good_label": "చిరుధాన్య పప్పు",
+        "bad_label": "తెల్ల అన్నం"
+      },
+      {
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "whole wheat roti",
+        "bad_food": "refined flour roti",
+        "good_label": "గోధుమ రొట్టె",
+        "bad_label": "తెల్ల రొట్టె"
+      },
+      {
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "brown rice",
+        "bad_food": "white rice",
+        "good_label": "బ్రౌన్ అన్నం",
+        "bad_label": "తెల్ల అన్నం"
+      },
+      {
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "millet chapati",
+        "bad_food": "white flour chapati",
+        "good_label": "చిరుధాన్య రొట్టె",
+        "bad_label": "తెల్ల రొట్టె"
+      },
+      {
+        "time": "సాయంత్రం 4-6 PM",
+        "good_food": "quinoa salad",
+        "bad_food": "potato chips",
+        "good_label": "క్వినోవా సలాడ్",
         "bad_label": "చిప్స్"
       },
       {
-        "time": "ఫైబర్",
-        "good_food": "Carrot sticks",
-        "bad_food": "White bread",
-        "good_label": "క్యారెట్",
-        "bad_label": "వైట్ బ్రెడ్"
+        "time": "రాత్రి 7-8:30 PM",
+        "good_food": "millet khichdi",
+        "bad_food": "refined rice khichdi",
+        "good_label": "చిరుధాన్య ఖిచ్డీ",
+        "bad_label": "తెల్ల అన్నం ఖిచ్డీ"
       },
       {
-        "time": "ఫైబర్",
-        "good_food": "Broccoli florets",
-        "bad_food": "Fried dough",
-        "good_label": "బ్రోకొలి",
-        "bad_label": "ఫ్రైడ్ డో"
-      },
-      {
-        "time": "ఫైబర్",
-        "good_food": "Mixed berries",
-        "bad_food": "Candy",
-        "good_label": "బెర్రీలు",
-        "bad_label": "క్యాండీ"
-      },
-      {
-        "time": "ఫైబర్",
-        "good_food": "Pear slices",
-        "bad_food": "Ice cream",
-        "good_label": "పియర్",
-        "bad_label": "ఐస్ క్రీమ్"
-      },
-      {
-        "time": "ఫైబర్",
-        "good_food": "Spinach salad",
-        "bad_food": "Fried chicken",
-        "good_label": "స్పినాచ్",
-        "bad_label": "ఫ్రైడ్ చికెన్"
-      },
-      {
-        "time": "ఫైబర్",
-        "good_food": "Sweet potato",
-        "bad_food": "White rice",
-        "good_label": "స్వీట్ పొటాటో",
-        "bad_label": "వైట్ రైస్"
+        "time": "నిద్రకు ముందు 9-10 PM",
+        "good_food": "whole grain cereal",
+        "bad_food": "sugar cereal",
+        "good_label": "గోధుమ సీరియల్",
+        "bad_label": "చక్కెర సీరియల్"
       }
     ],
     "tips": [
-      "ప్రతి భోజనంలో పండ్లు, కూరగాయలు చేర్చండి",
-      "క్యారెట్, బీట్‌రూట్ వంటి కాచికాయలు తింటే ఫైబర్ పెరుగుతుంది",
-      "పండ్లను తరిగి స్నాక్‌గా తీసుకోవడం సులభం",
-      "వెజిటబుల్ జ్యూస్ బదులుగా పూర్తి పండ్లు తినండి"
+      "ప్రతి భోజనంలో ధాన్యాలు మార్చండి",
+      "తెల్ల అన్నం బదులు మిల్లెట్ తీసుకోండి",
+      "గోధుమ రొట్టె ఎక్కువగా తినండి",
+      "పోషకాహారం కోసం బియ్యం పరిమితం చేయండి"
     ],
-    "footer": "ఆరోగ్యకరమైన ఫైబర్"
+    "footer": "ధాన్యాలు శక్తి"
   }
 }

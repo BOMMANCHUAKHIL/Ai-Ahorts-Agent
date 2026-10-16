@@ -1,3 +1,7 @@
+import PIL.Image
+if not hasattr(PIL.Image, 'ANTIALIAS'):
+    PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
+
 import os
 import time
 
@@ -5,7 +9,6 @@ from moviepy.editor import (
     ImageClip,
     AudioFileClip,
     CompositeVideoClip,
-    TextClip,
 )
 
 

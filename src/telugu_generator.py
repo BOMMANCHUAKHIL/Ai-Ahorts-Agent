@@ -7,40 +7,73 @@ load_dotenv()
 
 
 SYSTEM_PROMPT = """You are a Telugu-language nutrition content writer for YouTube Shorts.
-You write simple, grammatically correct Telugu that common people understand.
 
-You MUST return ONLY valid JSON. No explanations, no markdown, no code fences.
+You MUST return ONLY valid JSON. No explanations, no markdown.
 
-The JSON schema:
+JSON schema:
 {
   "telugu_title": "short Telugu title (max 6 words)",
   "telugu_subtitle": "short Telugu subtitle (max 8 words)",
   "rows": [
     {
-      "time": "Telugu time label like ఉదయం 7-9 AM",
-      "good_food": "simple english description of healthy food for AI image generation",
-      "bad_food": "simple english description of unhealthy alternative for AI image generation",
+      "time": "Telugu time label",
+      "good_food": "simple English description (2-5 words) for AI image search",
+      "bad_food": "simple English description (2-5 words)",
       "good_label": "Telugu label (2-4 words)",
       "bad_label": "Telugu label (2-4 words)"
     }
   ],
-  "tips": [
-    "Telugu tip 1",
-    "Telugu tip 2",
-    "Telugu tip 3",
-    "Telugu tip 4"
-  ],
+  "tips": ["Telugu tip 1", "Telugu tip 2", "Telugu tip 3", "Telugu tip 4"],
   "footer": "short Telugu slogan (max 4 words)"
 }
 
-RULES:
-- Exactly 7 rows.
-- Time labels use Indian meal times: ఉదయం 6-7 AM, ఉదయం 7-9 AM, మధ్యాహ్నం 10-11 AM, మధ్యాహ్నం 12-2 PM, సాయంత్రం 4-6 PM, రాత్రి 7-8:30 PM, నిద్రకు ముందు 9-10 PM.
-- If the concept is NOT about meal timing, use category labels in Telugu instead (like ప్రోటీన్, ఫైబర్, విటమిన్).
-- good_food and bad_food: simple 2-5 word English descriptions for image search.
-- Telugu must be correct, simple, and readable.
-- No medical claims, no dosages, no disease cures.
-- Focus on practical daily eating habits.
+═══════════════════════════════════════════
+TELUGU RULES (CRITICAL)
+═══════════════════════════════════════════
+1. Use ONLY simple, common Telugu words that a village or small-town
+   household would use. Do NOT invent compound words.
+2. Use these APPROVED Telugu words for common foods:
+   - idli = ఇడ్లీ
+   - dosa = దోస
+   - roti = రొట్టె
+   - paratha = పరాఠా
+   - rice = అన్నం
+   - dal = పప్పు
+   - vegetables = కూరగాయలు
+   - fruits = పండ్లు
+   - milk = పాలు
+   - curd = పెరుగు
+   - water = నీరు
+   - oil = నూనె
+   - salt = ఉప్పు
+   - sugar = చక్కెర
+   - healthy = ఆరోగ్యకరమైన
+   - unhealthy = అనారోగ్యకరమైన
+   - balanced = సమతుల్యమైన
+   - nutrition = పోషకాహారం
+   - protein = ప్రోటీన్
+   - fiber = పీచు పదార్థం
+   - vitamins = విటమిన్లు
+   - minerals = ఖనిజాలు
+   - white (refined) = తెల్ల
+   - whole wheat = గోధుమ
+   - millet = మిల్లెట్ / చిరుధాన్యాలు
+3. If you're not sure of a Telugu word, use the English word in Telugu
+   script (e.g. "ప్రోటీన్", "విటమిన్"). Do NOT invent translations.
+4. Use natural Telugu sentence structure, not English word order.
+5. NEVER write nonsensical literal translations like "అస్పష్ట రొట్టె".
+   If "plain roti" — say "తెల్ల రొట్టె" (white roti) or "సాదా రొట్టె".
+6. Test each phrase mentally: would a Telugu speaker in Hyderabad,
+   Vijayawada, or Tirupati say this? If not, rephrase.
+
+ROW RULES:
+- Exactly 7 rows
+- If the concept is about meal times, use: ఉదయం 6-7 AM, ఉదయం 7-9 AM,
+  మధ్యాహ్నం 10-11 AM, మధ్యాహ్నం 12-2 PM, సాయంత్రం 4-6 PM,
+  రాత్రి 7-8:30 PM, నిద్రకు ముందు 9-10 PM
+- If the concept is NOT about meal times, use category labels in Telugu
+- good_food and bad_food are ENGLISH (for image search) — 2 to 5 words
+- good_label and bad_label are TELUGU — 2 to 4 words
 """
 
 
@@ -92,8 +125,33 @@ class TeluguGenerator:
     def _call_groq(self, concept: str, info_hint: str) -> dict:
         user_msg = f"""Concept: {concept}
 Context: {info_hint}
+Here is an example of the format for a different concept:
 
-Generate the Telugu content JSON for this nutrition concept."""
+{{
+  "telugu_title": "ఆరోగ్యకరమైన అల్పాహారం",
+  "telugu_subtitle": "రోజు మొత్తం శక్తినిచ్చే తెలివైన ఎంపికలు",
+  "rows": [
+    {{"time": "ఉదయం 7-9 AM",
+      "good_food": "idli with sambar",
+      "bad_food": "white bread with jam",
+      "good_label": "ఇడ్లీ సాంబార్",
+      "bad_label": "తెల్ల బ్రెడ్ జామ్"}},
+    {{"time": "ఉదయం 9-11 AM",
+      "good_food": "boiled eggs",
+      "bad_food": "fried puri",
+      "good_label": "ఉడికించిన గుడ్లు",
+      "bad_label": "వేయించిన పూరీ"}}
+  ],
+  "tips": [
+    "ఉదయం 7-9 మధ్య అల్పాహారం తినండి",
+    "ప్రతి భోజనంలో ప్రోటీన్ చేర్చండి",
+    "నీరు ఎక్కువగా త్రాగండి",
+    "పండ్లు మరియు కూరగాయలు తినండి"
+  ],
+  "footer": "ఆరోగ్యమే మహాభాగ్యం"
+}}
+
+Now generate the JSON for concept: {concept}"""
 
         response = self.client.chat.completions.create(
             model=self.model,
@@ -101,7 +159,7 @@ Generate the Telugu content JSON for this nutrition concept."""
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": user_msg},
             ],
-            temperature=0.7,
+            temperature=0.1,
             max_tokens=2500,
             response_format={"type": "json_object"},
         )
