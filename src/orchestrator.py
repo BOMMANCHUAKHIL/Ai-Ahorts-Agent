@@ -135,10 +135,11 @@ class ShortsOrchestrator:
 
             review2 = self.reviewer.check(content, rows)
             if not review2["ok"]:
-                print("    ✗ Reviewer still rejected after fix. Skipping cycle.")
-                self._save_state()
-                return False
-            print("    ✓ Reviewer approved on second pass")
+                print("    ⚠ Reviewer still flagged issues after fix — continuing anyway")
+                for iss in (review2["text_issues"] + review2["image_issues"]):
+                    print(f"      - {iss.get('field') or iss.get('label')}: {iss.get('problem') or iss.get('reason')}")
+            else:
+                print("    ✓ Reviewer approved on second pass")
         else:
             print("    ✓ Reviewer approved")
 

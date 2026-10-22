@@ -56,7 +56,6 @@ class FoodFetcher:
 
         # Try every source with every candidate URL
         sources = [
-            ("Openverse", self._try_openverse),
             ("Wikimedia", self._try_wikimedia),
             ("Pixabay", self._try_pixabay),
         ]

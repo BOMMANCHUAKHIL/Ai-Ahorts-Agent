@@ -123,7 +123,8 @@ class ReviewerAgent:
                         {"role": "user", "content": user_msg},
                     ],
                     temperature=0.1,
-                    max_tokens=1500,
+                    max_tokens=4000,
+                    response_format={"type": "json_object"},  # ← add this back
                     # NOTE: no response_format — that's what was breaking it
                 )
                 raw = resp.choices[0].message.content or ""
