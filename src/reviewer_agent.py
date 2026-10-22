@@ -117,7 +117,7 @@ class ReviewerAgent:
         for attempt in range(3):
             try:
                 resp = self.client.chat.completions.create(
-                    model=self.text_model,
+                    model="llama-3.3-70b-versatile",
                     messages=[
                         {"role": "system", "content": SPELL_SYSTEM},
                         {"role": "user", "content": user_msg},
