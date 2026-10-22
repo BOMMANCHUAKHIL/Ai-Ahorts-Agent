@@ -184,5 +184,129 @@
       "పోషకాహారం కోసం బియ్యం పరిమితం చేయండి"
     ],
     "footer": "ధాన్యాలు శక్తి"
+  },
+  "myth: peanut butter is always healthy": {
+    "telugu_title": "పీనట్ బట్టర్ మిథ్",
+    "telugu_subtitle": "చక్కెర, నూనె దాగి ఉంటాయి",
+    "rows": [
+      {
+        "time": "బ్రాండ్ A",
+        "good_food": "natural peanut butter",
+        "bad_food": "peanut butter with sugar",
+        "good_label": "ఆరోగ్యకరమైన బట్టర్",
+        "bad_label": "చక్కెర బట్టర్"
+      },
+      {
+        "time": "బ్రాండ్ B",
+        "good_food": "peanut butter no oil",
+        "bad_food": "peanut butter with oil",
+        "good_label": "నూనె లేని బట్టర్",
+        "bad_label": "నూనె బట్టర్"
+      },
+      {
+        "time": "బ్రాండ్ C",
+        "good_food": "organic peanut butter",
+        "bad_food": "peanut butter with salt",
+        "good_label": "సేంద్రీయ బట్టర్",
+        "bad_label": "ఉప్పు బట్టర్"
+      },
+      {
+        "time": "బ్రాండ్ D",
+        "good_food": "peanut butter low sugar",
+        "bad_food": "peanut butter high sugar",
+        "good_label": "తక్కువ చక్కెర",
+        "bad_label": "అధిక చక్కెర"
+      },
+      {
+        "time": "బ్రాండ్ E",
+        "good_food": "peanut butter no additives",
+        "bad_food": "peanut butter with additives",
+        "good_label": "అడిటివ్స్ లేని",
+        "bad_label": "అడిటివ్స్ ఉన్న"
+      },
+      {
+        "time": "బ్రాండ్ F",
+        "good_food": "peanut butter plain",
+        "bad_food": "peanut butter flavored",
+        "good_label": "సాదా బట్టర్",
+        "bad_label": "రుచికర బట్టర్"
+      },
+      {
+        "time": "బ్రాండ్ G",
+        "good_food": "peanut butter with fiber",
+        "bad_food": "peanut butter with trans fat",
+        "good_label": "పీచు బట్టర్",
+        "bad_label": "ట్రాన్స్ ఫ్యాట్"
+      }
+    ],
+    "tips": [
+      "లేబుల్ చదవండి, చక్కెర చూడండి",
+      "నూనె లేకుండా, సాదా బట్టర్ ఎంచుకోండి",
+      "సాధారణంగా 2 టేబుల్ స్పూన్ వరకు",
+      "పండ్లు, కూరగాయలతో కలిసి తినండి"
+    ],
+    "footer": "సమతుల్యంగా తినండి"
+  },
+  "myth: ghee on idli adds nutrition": {
+    "telugu_title": "నెయ్యి ఇడ్లీ మిథ్",
+    "telugu_subtitle": "నెయ్యి పోషక విలువను పెంచుతుందా?",
+    "rows": [
+      {
+        "time": "ఉదయం 6-7 AM",
+        "good_food": "plain idli",
+        "bad_food": "idli with ghee",
+        "good_label": "సాదా ఇడ్లీ",
+        "bad_label": "నెయ్యి ఇడ్లీ"
+      },
+      {
+        "time": "ఉదయం 7-9 AM",
+        "good_food": "idli with sambar",
+        "bad_food": "idli with ghee",
+        "good_label": "ఇడ్లీ సాంబార్",
+        "bad_label": "నెయ్యి ఇడ్లీ"
+      },
+      {
+        "time": "మధ్యాహ్నం 10-11 AM",
+        "good_food": "fruit bowl",
+        "bad_food": "ghee drizzled idli",
+        "good_label": "పండ్ల బౌల్",
+        "bad_label": "నెయ్యి ఇడ్లీ"
+      },
+      {
+        "time": "మధ్యాహ్నం 12-2 PM",
+        "good_food": "dal rice",
+        "bad_food": "ghee rice",
+        "good_label": "పప్పు అన్నం",
+        "bad_label": "నెయ్యి అన్నం"
+      },
+      {
+        "time": "సాయంత్రం 4-6 PM",
+        "good_food": "roti with curd",
+        "bad_food": "roti with ghee",
+        "good_label": "పెరుగు రొట్టె",
+        "bad_label": "నెయ్యి రొట్టె"
+      },
+      {
+        "time": "రాత్రి 7-8:30 PM",
+        "good_food": "milk with banana",
+        "bad_food": "ghee milk",
+        "good_label": "పాలు అరటి",
+        "bad_label": "నెయ్యి పాలు"
+      },
+      {
+        "time": "నిద్రకు ముందు 9-10 PM",
+        "good_food": "herbal tea",
+        "bad_food": "ghee tea",
+        "good_label": "సూక్ష్మ టీ",
+        "bad_label": "నెయ్యి టీ"
+      }
+    ],
+    "tips": [
+      "ఇడ్లీపై నెయ్యి పరిమితంగా వాడండి",
+      "అధిక నెయ్యి మొత్తం కొవ్వు పెంచుతుంది",
+      "సాధారణ ఇడ్లీ ఆరోగ్యకరమైన ఎంపిక",
+      "పోషకాహారానికి ప్రోటీన్, పీచు అవసరం"
+    ],
+    "footer": "ఆరోగ్యమే లక్ష్యం"
   }
 }
