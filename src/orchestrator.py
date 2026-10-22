@@ -91,10 +91,15 @@ class ShortsOrchestrator:
 
         # 2. Poster + metadata (content, rows)
         print("\n[2/5] Building Telugu poster...")
-        poster_png, content, rows = self.poster_composer.compose_with_meta(
-            english_concept=english_concept,
-            info_hint=info_hint,
-        )
+        try:
+            poster_png, content, rows = self.poster_composer.compose_with_meta(
+                english_concept=english_concept,
+                info_hint=info_hint,
+            )
+        except Exception as e:
+            print(f"    ✗ Poster build failed: {e}")
+            self._save_state()  # persists video_counter so next run picks a new concept
+            return False
 
         # 3. Review
         print("\n[3/5] Reviewing poster...")
