@@ -64,7 +64,7 @@ class ReviewerAgent:
         self.client = Groq(api_key=api_key)
         # self.text_model = "openai/gpt-oss-120b"          # fast, text-only
         # self.vision_model = "meta-llama/llama-4-scout-17b-16e-instruct"  # vision
-        self.text_model = "llama-3.3-70b-versatile"
+        self.text_model = "openai/gpt-oss-120b"
         self.vision_model = "meta-llama/llama-4-scout-17b-16e-instruct"
         self.strict_images = strict_images
 
