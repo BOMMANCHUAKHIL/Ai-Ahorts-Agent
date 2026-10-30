@@ -45,7 +45,7 @@ class YouTubeUploader:
 
     def upload(self, video_path: str, title: str,
                description: str, tags: list = None,
-               privacy: str = "private") -> str:
+               privacy: str = "public") -> str:
         """Upload a video. Returns the YouTube video ID."""
 
         if not self.youtube:
