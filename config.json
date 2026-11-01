@@ -4,7 +4,7 @@
   "image_style": "Realistic food photography",
   "video_duration": 15,
   "upload_interval_minutes": 60,
-  "privacy_status": "private",
+  "privacy_status": "public",
   "video_title_template": "{topic} Tip #{counter}",
   "video_description": "Follow for daily tips!\n\n#shorts #nutrition",
   "image_providers": [
